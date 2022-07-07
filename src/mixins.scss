@@ -1,0 +1,10 @@
+@import './breakpoints';
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+
+        //@debug "desktop-width: #{$desktop-width}";
+
+        @content;
+    }
+}

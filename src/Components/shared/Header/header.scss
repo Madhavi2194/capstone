@@ -1,0 +1,99 @@
+@import '../../../mixins.scss';
+
+.nav-icons {
+  padding-top: 18px;
+}
+
+
+header {
+   
+  .nav-icons >ul {
+    display: var(--unnamed-display-flex);
+    padding: 0;
+  }
+
+  .nav-icons>ul>li {
+    padding: 0 12px
+  }
+  .navbar-toggle>ul{
+    padding:16px;
+    position: absolute;
+    width: 100%;
+    background: var(--white);
+    top: -99px;
+  }
+  .nav-item{
+    padding: 15px;
+  }
+ 
+
+
+  .border-grey {
+    border-bottom: 1px solid var(--gray-l1);
+  }
+
+  .header-wrapper {
+    padding: 25px 10px;
+  }
+
+  .close{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: var(--gray-l1);
+  }
+  .navbar-toggle {
+    position: absolute;
+    width: 100%;
+    background: var(--white);
+    top: 11%;
+    z-index: 9;
+    right: 1px;
+    box-shadow: 0px 8px 16px #00000026;
+
+  }
+  .navbar {
+    display: var(--unnamed-display-flex);
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    padding: 17px 35px;
+    text-align: center;
+
+    
+  }
+
+  
+}
+
+@include desktop {
+
+  .header-wrapper {
+      padding-top: 15px;
+  }
+
+  .navbar-nav {
+    display: var(--unnamed-display-flex);
+    width: 65%;
+    padding: 0;
+    justify-content: center;
+
+    .nav-item {
+      padding: 15px;
+    }
+  }
+
+  .nav-icons {
+    display: var(--unnamed-display-flex);
+    justify-content: space-evenly;
+    width: 20%;
+
+    .text_top {
+      vertical-align: top;
+    }
+
+  }
+
+
+}

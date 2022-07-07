@@ -1,0 +1,161 @@
+@import '../../../mixins.scss';
+
+.footer-wrapper {
+    padding: 35px 15px;
+    .footer-division-wrapper {
+
+
+        .footer-division {
+            padding-bottom: 50px;
+            p {
+               
+                 padding: 5px 0;
+            }
+
+            .social_icon {
+                display: flex;
+
+                .icon {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+}
+
+.copyright-wrapper {
+    padding: 30px 20px;
+    .footer-logo{
+        text-align: center;
+    }
+    .copyright{
+        padding: 40px;
+    }
+    .term-policy {
+        display: flex;
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-172026);
+        font-weight: 600;
+        justify-content: center;
+
+
+        .terms {
+            text-align: center;
+            padding: 0 15px;
+
+            a {
+                color: #1b252c;
+            }
+
+            .terms-text {
+                font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-17-5) Proxima Nova;
+                letter-spacing: var(--unnamed-character-spacing-0);
+                color: var(--unnamed-color-172026);
+                font-weight: 600;
+                padding-right: 15px;
+            }
+
+            .copyright {
+                color: #545D63;
+                text-align: center;
+                
+                span {
+                    display: block;
+                    margin-top: 10px;
+                }
+
+            }
+        }
+
+    }
+}
+
+.insta,
+.fcb,
+.twt {
+    height: 20px;
+}
+
+@include desktop {
+
+    .footer-wrapper {
+        padding: 35px 100px;
+
+        .footer-division-wrapper {
+            display: flex;
+            justify-content: space-around;
+            
+
+            .footer-division {
+                width: 20%;
+
+                p {
+                    padding: 5px 0;
+                }
+                .social_icon {
+                    display: flex;
+                    margin: 10px 0;
+                
+    
+                    .icon {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .copyright-wrapper {
+        padding: 30px 20px;
+        display: flex;
+        justify-content: space-around;
+        
+        .copyright {
+            padding: 0;
+        }
+        .footer-logo{
+            text-align: center;
+        }
+        .term-policy {
+            display: flex;
+            letter-spacing: var(--unnamed-character-spacing-0);
+            color: var(--unnamed-color-172026);
+            font-weight: 600;
+            text-align: center;
+    
+    
+            .terms {
+                text-align: center;
+                padding: 0 15px;
+    
+                a {
+                    color: #1b252c;
+                }
+    
+                .terms-text {
+                    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-17-5) Proxima Nova;
+                    letter-spacing: var(--unnamed-character-spacing-0);
+                    color: var(--unnamed-color-172026);
+                    font-weight: 600;
+                    padding-right: 15px;
+                }
+    
+                .copyright {
+                    color: #545D63;
+                    text-align: center;
+                    
+                    span {
+                        display: block;
+                        margin-top: 10px;
+                    }
+    
+                }
+            }
+    
+        }
+    }
+
+
+}

@@ -1,0 +1,81 @@
+@import '../../mixins.scss';
+    .banner-container{
+        padding: 0;
+    }
+.banner-wrapper {
+    .banner-image{
+        height: 225px;
+        background-image: url(../../assests/banner_image.webp);
+        background-repeat: no-repeat;
+        background-size: 100%;
+      
+        
+
+    }
+    .banner-sider-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: -122px auto 50px;
+        width: 90%;
+        background-color: var(--unnamed-color-1B252C);
+        color: var(--white);
+        padding: 10px;
+        h2 {
+            border-bottom: 8px solid#336dff;
+            padding-bottom: 24px;
+        } 
+        
+    }
+
+}
+
+
+@include desktop {
+    .banner-container{
+        padding: 0 100px;
+    }
+     .banner-wrapper {
+       grid-gap: 0;
+        display: grid;
+        gap: 0;
+        grid-auto-columns: 1fr;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 32px 0;
+
+        .banner-sider-content {
+            display: flex;
+            grid-column: 1/span 2;
+            justify-content: center;
+            align-items: center;
+            align-self: stretch;
+            min-height: 140px;
+            background-color: var(--unnamed-color-1B252C);
+            color: var(--white);
+            padding: 5rem;
+            text-align: center;
+            width: 100%;
+            z-index: 1;
+            margin: -13px 0;
+            height: 100%;
+        }
+        .banner-image{
+            display: flex;
+            grid-column: 3/span 4;
+            min-height: 265px;
+            width: 100%;
+            align-self: center;
+            background-image: url(../../assests/banner_image.webp);
+            background-position: 50%;
+            background-size: cover;
+            
+        }
+       
+         h2 {
+            border-bottom: 8px solid#336dff;
+            padding-bottom: 24px;
+        }
+}
+
+}

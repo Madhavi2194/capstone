@@ -1,0 +1,22 @@
+@import '../../mixins.scss'; 
+
+.px-20 {
+    padding: 16px 0;
+}
+
+.sort_arrow{
+    height: 16px;
+    width:16px;
+}
+.selectbox-wrapper {
+    padding: 12px;
+    height: 44px;
+    width: 254px;
+    border-radius:5px;
+}
+
+@include desktop {
+    .px-20 {
+        padding: 0;
+    }
+}

@@ -1,0 +1,80 @@
+@import '../../mixins.scss';
+
+
+.gallerycontainer {
+    .column {
+        img {
+          height: 60px;
+          vertical-align: middle;
+          margin: 5px 0;
+
+        }
+    }
+
+    
+  .next-slide {
+    padding: 25px;
+  }
+}
+
+.mySlides 
+{
+    img {
+      height: 680px;
+       width: 100%;
+      padding: 35px;
+  }
+}
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .gallerycontainer {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+   /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  @include desktop {
+    .gallerycontainer {
+      .column {
+          img {
+            height: 85px;
+            vertical-align: middle;
+            margin: 5px 0;
+  
+          }
+      }
+    }
+
+  }
