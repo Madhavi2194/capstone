@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { NavLink } from "react-router-dom";
 import "../carousel/carousel.scss";
 
 const HomeCarousel = () => {
@@ -33,7 +34,9 @@ const HomeCarousel = () => {
                 <div className="">Signature Collection</div>
               </div>
               <p className="mb-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna.</p>
-              <button className="carousel-button">SHOP NOW</button>
+              <NavLink to={'/product'}>
+                <button className="carousel-button">SHOP NOW</button>
+                </NavLink>
             </div>
           </div>
           <div className="carousel_image2">
@@ -44,7 +47,9 @@ const HomeCarousel = () => {
                 <div className="">Signature Collection</div>
               </div>
               <p className="mb-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna.</p>
-              <button className="carousel-button">SHOP NOW</button>
+               <NavLink to={'/product'}>
+                 <button className="carousel-button">SHOP NOW</button>
+              </NavLink>
             </div>
           </div>
         </Carousel>

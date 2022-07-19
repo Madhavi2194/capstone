@@ -1,14 +1,13 @@
 import React from "react";
 import '../PriceSummary/PriceSummary.scss';
-import paypal from '../../../assests/paypal.png';
-import { useNavigate } from "react-router-dom";
+import Button from "Components/Button/button";
+import { useMatch} from "react-router-dom";
 
 function PricingSummary() {
-    const navigate = useNavigate();
-
-    const navigateTOCheckout=()=>{
-        navigate("/checkout")
-    }
+    
+    const checkoutPage = useMatch('/checkout');
+    
+  
 
     return (
         <section>
@@ -64,10 +63,8 @@ function PricingSummary() {
                         <p>$ 233.68</p>
                     </div>
                 </div>
-                <button className="checkout-btn" onClick={navigateTOCheckout}><i className="fa fa-user-o" aria-hidden="true" ></i>CHECKOUT</button>
-                <div className="paypal-btn-img">
-                    <img src={paypal} className="paypal-img" alt="paypal-link" />
-                </div>
+                {!checkoutPage &&  <Button ></Button> }
+               
             </section>
         </section>
     )

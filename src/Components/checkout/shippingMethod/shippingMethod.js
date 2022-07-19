@@ -2,19 +2,43 @@ import React, { useState }  from "react";
 import "./shippingMethod.scss";
 import edit from '../../../assests/edit-orange.svg';
 import { useForm} from 'react-hook-form';
+import { useDispatch,useSelector } from "react-redux";
+import { setshippingMethod } from "redux/actions/shippingMethod";
 
     const ShippingMethod = (props) => {
     const [isEditMode , toggleEditMode] = useState(true);
     const {handleSubmit } = useForm({ shouldUnregister: false });
 
+    const shippingMethod_Store = useSelector((state) => state.shippingMethod.shippingMethod);
+    const [ShippingMethod_state,Set_ShippingMethod_state]  = useState(shippingMethod_Store);
+    let dispatch = useDispatch();
+
     const onSubmit = (data) => {
+      
         toggleEditMode(false);
         props.clickContinue();
         console.log("b",data); 
+        dispatch(setshippingMethod(ShippingMethod_state))
     } 
+
+    const setFormdata = (ev) =>{
+        
+        let {value, name} = ev.target;
+        Set_ShippingMethod_state(
+            (pre) => {
+                return{
+                    ...pre ,
+                    [name] : value,
+                }
+                
+
+            }
+        )
+    }
     const onEdit =() =>{
         toggleEditMode(true);
     }
+
    
     return (
         <div className="mb-24">
@@ -26,17 +50,17 @@ import { useForm} from 'react-hook-form';
                     <div className="radio-btn">
                         <form className="shipping-method-form-section" onSubmit={handleSubmit(onSubmit)}>
                             <div className="first-btn">
-                                <input type="radio" id="html" name="fav_language" value="HTML" className="shipping-radio-btn" />
+                                <input type="radio" id="stdshipping" className="shipping-radio-btn" name="shippingtype"  value= "Standard Shipping (4-8 business days via USPS) FREE" onChange ={setFormdata} />
                                 <label htmlFor="html" className="shipping-method-btn-txt">Standard Shipping (4-8 business days via USPS) FREE</label>
                             </div>
                             <div className="first-btn">
 
-                                <input type="radio" id="html" name="fav_language" value="HTML" className="shipping-radio-btn" />
+                                <input type="radio" id="html"  className="shipping-radio-btn" name="shippingtype"  value="Express Delivery (2-5 business days via USPS) $17.95" onChange ={setFormdata}/>
                                 <label htmlFor="html" className="shipping-method-btn-txt">Express Delivery (2-5 business days via USPS) $17.95</label>
                             </div>
                             <div className="first-btn">
 
-                                <input type="radio" id="html" name="fav_language" value="HTML" className="shipping-radio-btn" />
+                                <input type="radio" id="html" className="shipping-radio-btn" name="shippingtype"  value= "Next Day Delivery (Next business days via FedEx) $53.61" onChange ={setFormdata}/>
                                 <label htmlFor="html" className="shipping-method-btn-txt">Next Day Delivery (Next business days via FedEx) $53.61</label>
                             </div>
 
@@ -65,10 +89,9 @@ import { useForm} from 'react-hook-form';
                     <div className="aem-Grid aem-Grid--12 user-details-section">
                         <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6 aem-GridColumn--phone--12'>
                             <div>
-                                Standard Shipping
+                              {ShippingMethod_state.shippingtype}
                             </div>
-                            <div>Est. delivery in 4-8 Business days</div>
-                            <div>Free</div>
+                            
                         </div>
 
                     </div>

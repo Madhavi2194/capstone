@@ -5,7 +5,7 @@ import ShippingMethod from 'Components/checkout/shippingMethod/shippingMethod';
 import PaymentInfo from 'Components/checkout/paymentInfo/paymentInfo';
 import Orderitem from './orderItem/orderitem';
 import "./checkout.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,NavLink } from "react-router-dom";
 import HorizontalBar from 'Components/horizontalBar/horizontalbar';
 const SHIPPING_INFO = 'SHIPPING_INFO';
 const SHIPPING_METHOD = 'SHIPPING_METHOD';
@@ -34,7 +34,8 @@ const Checkout = () => {
     }
     const ViewTab = ({ serialNumber, tabLabel }) => (
         
-        <section className='container'><div className='checkout-tab inactive'>
+        <section className='container mb-20'>
+            <div className='checkout-tab inactive'>
             
             {`${serialNumber}. ${tabLabel}`}
         </div>
@@ -46,7 +47,7 @@ const Checkout = () => {
     return (
         <section className='container'>
             <div className='text-center'>
-                <h2 className='display-l-36- text-center'> <b>Checkout</b></h2>
+                <h2 className='display-l-36- text-center margin-heading-checkout '> <b>Checkout</b></h2>
                 <div className='mb-32'><HorizontalBar></HorizontalBar></div>
             </div>
             <div className="aem-Grid aem-Grid--12">
@@ -65,8 +66,8 @@ const Checkout = () => {
                             <ViewTab serialNumber={3} tabLabel="Payment Information" />
                         )}
 
-                     {activeView[SHIPPING_METHOD] && activeView[SHIPPING_INFO] && activeView[PAYMENT_INFO]  &&
-                        <Orderitem></Orderitem> 
+                     {activeView[SHIPPING_METHOD] && activeView[SHIPPING_INFO] && activeView[PAYMENT_INFO]  && 
+                        <Orderitem ></Orderitem> 
                         }
 
                         <div className='text-center mb-24'>
@@ -75,12 +76,12 @@ const Checkout = () => {
 
                         <div className='text-center mb-125'>
                             By Clicking confirm order you agree to our&nbsp;&nbsp;
-                            Terms and Conditions
+                            <NavLink to={'/capstone'}>Terms and Conditions</NavLink>
                         </div>
                  </div>
 
                 <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--8 aem-GridColumn--phone--12'>
-                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--5 aem-GridColumn--phone--hide ">
+                {!activeView[SHIPPING_METHOD] && !activeView[PAYMENT_INFO] && <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--5 aem-GridColumn--phone--hide ">
                     <section className='sign-in-section'>
                         <div className='aem-Grid aem-Grid--12'>
                             <div className='aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--8 aem-GridColumn--phone--6'>
@@ -91,7 +92,7 @@ const Checkout = () => {
                             </div>
                         </div>
                     </section>
-                </div>
+                </div> }
                 <div className='mb-16'>
                    <PricingSummary></PricingSummary>
                 </div>

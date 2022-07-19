@@ -1,7 +1,8 @@
 import React from 'react';
 import '../Header/header.scss';
 import { useState } from 'react';
-import shoppingBag from '../../../assests/shopping-bag-white.svg'
+import shoppingBag from '../../../assests/shopping-bag-white.svg';
+import { NavLink } from "react-router-dom";
 
 
 const Header = () =>   {
@@ -16,7 +17,9 @@ const Header = () =>   {
                                 <img className="Hamburger" alt="Hambuger" src={require("../../../assests/menu.png")} />
                             </button>
                             <div className="navbar-brand" >
+                            <NavLink to={'/capstone'}>
                                 <img className="logo-img" alt="LOGO" href="/venia" src={require("../../../assests/venia-white-logo.png")} />
+                            </NavLink>
                             </div>
 
                            { show? <div className='navbar-toggle' >
@@ -57,7 +60,9 @@ const Header = () =>   {
 
                     <div className="visible_sm_none visible_lg_flex">
                          <div className="navbar-brand" >
+                         <NavLink to={'/capstone'}>
                             <img className="logo-img"  href="/venia" alt="LOGO" src={require("../../../assests/venia-white-logo.png")} />
+                        </NavLink>
                         </div>
 
                         <ul className="navbar-nav visible_sm">
