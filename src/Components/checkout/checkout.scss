@@ -1,0 +1,29 @@
+.sign-in-section {
+    border: 1px solid lightgrey;
+    margin-top: var(--unnamed-pixel-20);
+    padding: var(--unnamed-pixel-16);
+    margin-bottom: 16px;
+}
+.signin-btn{
+    background: var(--white) 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #D4703D;
+    opacity: 1;
+    color: #D4703D;
+    padding: 11px ;
+    width:100%;
+}
+
+
+.border-bottom, .checkout-tab.inactive {
+    border-bottom: var(--unnamed-border-solid);
+}
+
+.checkout-tab.inactive {
+    color: var(--gray-d1);
+    font-size: var(--unnamed-pixel-20);
+    font-weight: 600;
+}
+.checkout-tab {
+    padding: var(--unnamed-pixel-20) 0;
+}

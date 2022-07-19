@@ -1,14 +1,19 @@
 import React from "react";
-import Banner from'../../Components/Banner/banner';
-import Breadcrum from '../../Components/breadcrum/breadcrum'
-import ProductList from '../../Components/ProductList/productlist';
+import Category from "Components/cateogory/category";
+import HomeBanner from "Components/homeBanner/homeBanner";
+import HomebannerSection from "Components/homebannerSection/homebannerSection";
+import Carousel from "Components/carousel/carousel";
+
 
 function Home() {
  return (
     <div>
-        <Banner></Banner>
-        <Breadcrum></Breadcrum>
-        <ProductList></ProductList>
+        <Carousel></Carousel>
+        <Category></Category>
+        <HomeBanner></HomeBanner>
+        <HomebannerSection></HomebannerSection>
+        
+      
         
     </div>
  )

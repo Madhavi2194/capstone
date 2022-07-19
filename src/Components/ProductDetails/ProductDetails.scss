@@ -42,7 +42,7 @@
 .horizontal-bar{
     width:110px;
     height: 8px;
-    background-color: blue;
+    background-color: #D4703D;
     margin: 0 auto;
 }
 .block-header{
@@ -52,7 +52,7 @@
     font-family: var(--unnamed-font-family-source-serif-pro);
     font-style: var(--unnamed-font-style-normal);
     font-weight: var(--unnamed-font-weight-600) !important;
-    font-size: var(--unnamed-font-size-24) !important;
+    font-size: var(--unnamed-font-size-24) ;
     line-height: var(--unnamed-line-spacing-45);
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-172026);
@@ -306,7 +306,7 @@ width:auto;
 .horizontal-bar{
     width:110px;
     height: 8px;
-    background-color: blue;
+    background-color: #D4703D;
     margin: 0 0 44px 0;
    
 }

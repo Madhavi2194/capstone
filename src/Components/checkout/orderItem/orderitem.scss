@@ -1,0 +1,16 @@
+.order-item-wrapper{
+    border: 1px solid lightgrey;
+    margin-bottom: var(--unnamed-pixel-24);
+    padding: var(--unnamed-pixel-16);
+
+    .order-item {
+        margin-top: 24px;
+        overflow: hidden;
+    
+        .order-img{
+            width:80px;
+            object-fit: contain;
+        }
+    }
+   
+}

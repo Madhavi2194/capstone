@@ -1,0 +1,127 @@
+@import '../../../mixins.scss';
+
+section {
+    div{
+        .radio-btn {
+            
+
+            .first-btn {
+                display: flex;
+                margin-bottom: 10px;
+            }
+
+            .shipping-radio-btn {
+                /* UI Properties */
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 2px solid #E26A2C;
+                opacity: 1;
+                height: 24px;
+                width: 24px;
+                margin-right: 14px;
+            }
+        }
+    }
+    
+    
+
+        h2 {
+            font: var(--unnamed-font-weight-600);
+            letter-spacing: var(--unnamed-character-spacing-0);
+            color: var(--unnamed-color-172026);
+            text-align: left;
+            margin-bottom: 24px;
+        }
+
+        .shipmethod-heading {
+            margin-bottom: 26px;
+        }
+        .shipmethod-btn{
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 2px solid #D4703D;
+            opacity: 1;
+            color: #D4703D;
+            padding: 11px 55px;
+            
+        }
+
+        .paymentinfo-Readonly{
+            .paymentreadonly-Heading{
+                display: flex;
+                justify-content: space-between;
+            }
+            
+        }
+        .paymentinfo-border{
+            border: 1px solid #D1D3D6;
+            border-radius: 2px;
+            padding: 15px;
+        }
+
+
+
+    
+}
+
+
+@include desktop {
+    section {
+        div{
+            .radio-btn {
+               
+    
+                .first-btn {
+                    display:flex;
+                     gap: 1em;
+                    margin-bottom: 10px;
+                }
+    
+                .shipping-radio-btn {
+                    /* UI Properties */
+                    background: var(--white) 0% 0% no-repeat padding-box;
+                    border: 2px solid var(--primary-brand);
+                    background: #FFFFFF 0% 0% no-repeat padding-box;
+                    border: 2px solid #E26A2C;
+                    opacity: 1;
+                    height: 24px;
+                    width: 24px;
+                }
+            }
+        }
+        
+        
+    
+            h2 {
+                font: var(--unnamed-font-weight-600);
+                letter-spacing: var(--unnamed-character-spacing-0);
+                color: var(--unnamed-color-172026);
+                text-align: left;
+                margin-bottom: 24px;
+            }
+    
+            .shipmethod-heading {
+                margin-bottom: 26px;
+            }
+            .shipmethod-btn{
+                background: var(--white) 0% 0% no-repeat padding-box;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 2px solid #D4703D;
+                opacity: 1;
+                color: #D4703D;
+                padding: 11px 55px;
+                
+            }
+    }
+        .paymentinfo-Readonly{
+            .paymentreadonly-Heading{
+                display: flex;
+                justify-content: space-between;
+            }
+            
+        }
+        .paymentinfo-border{
+            border: 1px solid #D1D3D6;
+            border-radius: 2px;
+            padding: 15px;
+        }
+
+}

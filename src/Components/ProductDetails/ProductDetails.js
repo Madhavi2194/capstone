@@ -23,7 +23,7 @@ function ProductDetails() {
         const response = await axios
             .get(`https://fakestoreapi.com/products/${id}`)
             .catch((err) => {
-                console.log("Err: ", err);
+               
             });
         dispatch(selectedProduct(response.data));
     };
@@ -33,6 +33,8 @@ function ProductDetails() {
         dispatch(addTOCart(item))
         navigate("/cart")
     }
+
+    
 
     useEffect(() => {
         if (productID) {

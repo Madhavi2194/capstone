@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../Header/header.scss';
 import { useState } from 'react';
+import shoppingBag from '../../../assests/shopping-bag-white.svg'
 
 
 const Header = () =>   {
@@ -15,7 +16,7 @@ const Header = () =>   {
                                 <img className="Hamburger" alt="Hambuger" src={require("../../../assests/menu.png")} />
                             </button>
                             <div className="navbar-brand" >
-                                <img className="logo-img" alt="LOGO" href="/venia" src={require("../../../assests/logo.png")} />
+                                <img className="logo-img" alt="LOGO" href="/venia" src={require("../../../assests/venia-white-logo.png")} />
                             </div>
 
                            { show? <div className='navbar-toggle' >
@@ -42,27 +43,27 @@ const Header = () =>   {
                                 </div>
                             </div>:null }
 
-                            
-
                             <div className="nav-icons">
                                 <ul>
                                     <li className="nav-icon">
-                                       <img src={require("../../../assests/search.png")}  alt="search-icon"/> 
-                                    </li>
-
-                                    <li className="nav-icon">
-                                       <img src={require("../../../assests/shopping-bag.png")} alt="shopbag-icon"/>
+                                       <img src={shoppingBag} alt="shoppingBag"/>
                                     </li>
                                 </ul>
+                                <div className='cart-counter'>0</div>
                             </div>
+
                         </div>
                     </nav>
+
                     <div className="visible_sm_none visible_lg_flex">
                          <div className="navbar-brand" >
-                            <img className="logo-img"  href="/venia" alt="LOGO" src={require("../../../assests/logo.png")} />
+                            <img className="logo-img"  href="/venia" alt="LOGO" src={require("../../../assests/venia-white-logo.png")} />
                         </div>
 
                         <ul className="navbar-nav visible_sm">
+                            <li className="nav-item">
+                               Home
+                            </li>
                             <li className="nav-item">
                                Women
                             </li>
@@ -70,23 +71,22 @@ const Header = () =>   {
                                 Men 
                             </li>
                             <li className="nav-item">
-                                Smart Gear 
+                                Electronic 
                             </li>
                             <li className="nav-item">
-                                Accesories
+                                Jwellary
                             </li>
                         </ul>
 
                         <div className="nav-icons">
-                            <div><img src={require("../../../assests/search.png")}  alt="search"/> </div>
-                            <div className=''><img src={require("../../../assests/user.png")} alt="user-icon"/> <b className='text_top'> Sign in</b></div>
-                            <div><img src={require("../../../assests/shopping-bag.png")} alt="shoppingbag-icon"/></div>
+                           
+                            <img src={shoppingBag} className="cart-bag" alt="shoppingBag"/>
+                            <div className='cart-counter'>0</div>
                         </div>
                     </div>
 
 
                 </header>
-                <hr className='border-grey'></hr>
             </>
         );
     

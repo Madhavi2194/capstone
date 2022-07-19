@@ -3,10 +3,11 @@
 .nav-icons {
   padding-top: 18px;
 }
-
+.header-wrapper{
+  background-color: var(--primary-brand);
+}
 
 header {
-   
   .nav-icons >ul {
     display: var(--unnamed-display-flex);
     padding: 0;
@@ -25,7 +26,19 @@ header {
   .nav-item{
     padding: 15px;
   }
- 
+ .cart-counter{
+  background: var(--unnamed-color-172026);
+  border-radius: 50%;
+  color: var(--white);
+  display: flex;
+  font-size: var(--unnamed-font-size-10);
+  height: var(--unnamed-pixel-20);
+  justify-content: center;
+  position: absolute!important;
+  right:6.5%;
+  top: 8px;
+  width: var(--unnamed-pixel-16);
+ }
 
 
   .border-grey {
@@ -63,15 +76,34 @@ header {
 
     
   }
-
+   .cart-bag{
+    width: 20px;
+    height: 20px;
+   }
   
 }
 
 @include desktop {
 
   .header-wrapper {
-      padding-top: 15px;
+      // padding-top: 15px;
+      background: var(--primary-brand) 0% 0% no-repeat padding-box;
+
+      .cart-counter{
+        background: var(--unnamed-color-172026);
+        border-radius: 50%;
+        color: var(--white);
+        display: flex;
+        font-size: var(--unnamed-font-size-10);
+        height: var(--unnamed-pixel-20);
+        justify-content: center;
+        position: absolute!important;
+        right:14.5%;
+        top: 8px;
+        width: var(--unnamed-pixel-16);
+       }
   }
+ 
 
   .navbar-nav {
     display: var(--unnamed-display-flex);
@@ -81,6 +113,9 @@ header {
 
     .nav-item {
       padding: 15px;
+    }
+    li{
+      color: var(--white);
     }
   }
 

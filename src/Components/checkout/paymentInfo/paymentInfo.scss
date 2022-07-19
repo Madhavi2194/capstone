@@ -1,0 +1,69 @@
+
+@import '../../../mixins.scss';
+
+section {
+
+        .payment-input-btn {
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 2px solid #E26A2C;
+            opacity: 1;
+            height: 24px;
+            width: 24px;
+            margin-right: 14px;
+        }
+
+        .payment-info-Labels {
+            font-size: 16px;
+            margin-left: 5px;
+            text-align: justify;
+            margin-top: 0px;
+        }
+        .payment-selection{
+            display: flex;
+            margin-bottom: 16px;
+        }
+        .form-labels{
+            margin-bottom: 8px;
+        }
+        .payment-inputbox{
+            background: var(--white) 0% 0% no-repeat padding-box;
+            border: 2px solid var(--gray-l2);
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 2px solid #B5B7BC;
+            border-radius: 8px;
+            opacity: 1;
+            padding: 11px 45px;
+        }
+        .cvv-input-textbox {
+            background: var(--white) 0% 0% no-repeat padding-box;
+            border: 2px solid var(--gray-l2);
+            width: 50%;
+            padding: 11px 45px;
+            border-radius:8px;
+        }
+        .card-details {
+            display: flex;
+            justify-content: space-between;
+        }
+        .margin-24 {
+            margin: 24px 0;
+        }
+        .paymentinfo-Readonly{
+            .paymentreadonly-Heading{
+                display: flex;
+                justify-content: space-between;
+            }
+            
+        }
+        .paymentinfo-border{
+            border: 1px solid #D1D3D6;
+            border-radius: 2px;
+            padding: 15px;
+        }
+}
+
+@include desktop {
+    .container {
+        padding: 0 100px;
+    }
+}

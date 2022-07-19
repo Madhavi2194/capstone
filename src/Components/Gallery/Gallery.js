@@ -39,52 +39,52 @@ const Gallery = (props) => {
     const image = props.image;
 
     return (        
-        <div class="gallerycontainer aem-Grid aem-Grid--12">
-            <div class="row show-lg aem-GridColumn aem-GridColumn--default--2 visible_sm">
-                <div class="column">
-                    <img class="demo cursor" src={image} onClick={() => currentSlide(1)} alt="product-img" />
+        <div className="gallerycontainer aem-Grid aem-Grid--12">
+            <div className="row show-lg aem-GridColumn aem-GridColumn--default--2 visible_sm">
+                <div className="column">
+                    <img className="demo cursor" src={image} onClick={() => currentSlide(1)} alt="product-img" />
                 </div>
-                <div class="column">
-                    <img class="demo cursor" src={image} onClick={() => currentSlide(2)} alt=" product-img" />
+                <div className="column">
+                    <img className="demo cursor" src={image} onClick={() => currentSlide(2)} alt=" product-img" />
                 </div>
-                <div class="column">
-                    <img class="demo cursor" src={image} onClick={() => currentSlide(3)}  alt="product-img" />
+                <div className="column">
+                    <img className="demo cursor" src={image} onClick={() => currentSlide(3)}  alt="product-img" />
                 </div>
-                <div class="column">
-                    <img class="demo cursor" src={image} onClick={() => currentSlide(4)}  alt="product-img" />
+                <div className="column">
+                    <img className="demo cursor" src={image} onClick={() => currentSlide(4)}  alt="product-img" />
                 </div>
-                <div class="column">
-                    <img class="demo cursor" src={image} onClick={() => currentSlide(5)}  alt="product-img" />
+                <div className="column">
+                    <img className="demo cursor" src={image} onClick={() => currentSlide(5)}  alt="product-img" />
                 </div>
-                <div class="column">
-                    <img class="demo cursor" src={image} onClick={() => currentSlide(6)}  alt="product-img" />
+                <div className="column">
+                    <img className="demo cursor" src={image} onClick={() => currentSlide(6)}  alt="product-img" />
                 </div>
 
-                <a class="next-slide"  onClick={() => plusSlides(1)}><img src={downArrow} alt="down arrow" /></a>
+                <a className="next-slide"  onClick={() => plusSlides(1)}><img src={downArrow} alt="down arrow" /></a>
             </div>
 
-            <div class="aem-GridColumn aem-GridColumn--default--10">
-                <div class="mySlides">                    
+            <div className="aem-GridColumn aem-GridColumn--default--10">
+                <div className="mySlides">                    
                     <img src={image} alt="product-img" />
                 </div>
 
-                <div class="mySlides">
+                <div className="mySlides">
                     <img src={image} alt="product-img" />
                 </div>
 
-                <div class="mySlides">
+                <div className="mySlides">
                    <img src={image} alt="product-img" />
                 </div>
 
-                <div class="mySlides">
+                <div className="mySlides">
                 <img src={image} alt="product-img" />
                 </div>
 
-                <div class="mySlides">
+                <div className="mySlides">
                 <img src={image} alt="product-img" />
                 </div> 
                 
-                <div class="mySlides">
+                <div className="mySlides">
                 <img src={image} alt="product-img" />
                 </div>              
 

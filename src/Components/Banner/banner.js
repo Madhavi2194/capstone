@@ -5,7 +5,7 @@ class Banner extends Component {
     render() {
         return (
              <div className="banner-container ">
-                <div className="banner-wrapper visible_sm_none ">
+                <div className="visible_sm_none banner-wrapper  ">
                     
                     <div className="banner-sider-content">
                         <h2>

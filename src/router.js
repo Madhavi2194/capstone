@@ -4,6 +4,9 @@ import Cart from "./Pages/Cart/CartPage";
 import ProductPage from "./Pages/ProductPage/ProductPage";
 import App from "./App";
 import PageNotFound from "./Components/PageNotFound/PageNotFound";
+import Checkout from "Pages/Checkout/checkout";
+import Products from "Pages/Products/products";
+import Ordersummary from "Components/checkout/ordersummary/ordersummary";
 
 const Router = () => (
 
@@ -13,9 +16,14 @@ const Router = () => (
 
             <Routes>
 
-                <Route path="venia" element={
+                <Route path="capstone" element={
 
                     <Home/>
+
+                } />
+                 <Route path="/product" element={
+                     
+                    <Products></Products>
 
                 } />
 
@@ -33,6 +41,19 @@ const Router = () => (
                     <Cart></Cart>
 
                 } />
+
+                <Route path="/checkout" element={
+
+                <Checkout></Checkout>
+
+                } />
+
+                <Route path="/ordersummary" element={
+
+                <Ordersummary></Ordersummary>
+
+                } />
+
                  <Route path="*" element={
                     <PageNotFound></PageNotFound>
                  }/>

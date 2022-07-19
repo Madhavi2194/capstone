@@ -1,0 +1,163 @@
+@import '../../mixins.scss';
+
+.homeBanner-container {
+    .display-xl-24- {
+        font-size: 28px;
+        line-height: 42px;
+        font-weight: bold;
+        margin-top: 16px;
+    }
+    .regular-heading-20{
+        font-family: var(--unnamed-font-family-muli);
+        font-style: var(--unnamed-font-style-normal);
+        font-weight: var(--unnamed-font-weight-bold);
+        font-size: var(--unnamed-font-size-16);
+        line-height: var(--unnamed-line-spacing-25);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-172026);
+        text-align: center;
+    }
+    .regualr-heading-16{
+        font-family: var(--unnamed-font-family-muli);
+        font-style: var(--unnamed-font-style-normal);
+        font-weight: var(--unnamed-font-weight-normal);
+        font-size: var(--unnamed-font-size-16);
+        line-height: var(--unnamed-line-spacing-24);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-172026);
+        text-align: center;
+    }
+
+    .horizontal-bar {
+        position: absolute;
+        bottom: -4%;
+        right: 31%;
+    }
+
+    .banner-content-sec {
+        padding: 0 14px;
+        text-align: left;
+    }
+
+    .banner-image-sec {
+        width: 100%;
+        margin: 0;
+        height: 350px;
+        background-image: url(../../assests/manModel-1.jpg);
+        background-position: top;
+        background-size: cover;
+        
+
+    }
+
+    .button-wrapper {
+        .btn {
+            padding: 11px 45px;
+            margin: 8px 0;
+            color: #D4703D;
+            width:100%;
+        }
+
+        .button-shop {
+            background: var(--white) 0% 0% no-repeat padding-box;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 2px solid #D4703D;
+            opacity: 1;
+        }
+
+        .button-shopnow {
+            background: var(--primary-brand) 0% 0% no-repeat padding-box;
+            background: #E26A2C 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 6px #39373729;
+            opacity: 1;
+            color: #ffffff;
+            border: 2px solid #D4703D;
+        }
+
+    }
+
+}
+
+@include desktop {
+    .homeBanner-container {
+        margin: 0 107px;
+
+        .display-xl-24- {
+            font-family: var(--unnamed-font-family-muli);
+            font-style: var(--unnamed-font-style-normal);
+            font-weight: var(--unnamed-font-weight-600);
+            font-size: var(--unnamed-font-size-48);
+            line-height: var(--unnamed-line-spacing-60);
+            letter-spacing: var(--unnamed-character-spacing-0);
+            color: var(--unnamed-color-172026);
+            text-align: left;
+        }
+        .regular-heading-20{
+            font-family: var(--unnamed-font-family-muli);
+            font-style: var(--unnamed-font-style-normal);
+            font-weight: var(--unnamed-font-weight-600);
+            font-size: var(--unnamed-font-size-20);
+            line-height: var(--unnamed-line-spacing-25);
+            letter-spacing: var(--unnamed-character-spacing-0);
+            color: var(--unnamed-color-172026);
+            text-align: left;
+        }  
+        .regualr-heading-16{
+            text-align: left;
+        }     
+
+        .image-sec-right{
+            float: right !important;
+        }
+
+        .horizontal-bar {
+            position: absolute;
+            bottom: -25%;
+            left: 5%;
+        }
+        
+
+        .banner-content-sec {
+            padding: 0 44px;
+            text-align: left;
+        }
+
+        .banner-image-sec {
+            width: 100%;
+            margin: 0;
+            height: 350px;
+            background-image: url(../../assests/manModel-1.jpg);
+            background-position: top;
+            background-size: cover;
+
+        }
+
+        .button-wrapper {
+            display:flex;
+            .btn {
+                padding: 11px 45px;
+                margin-right: 33px;
+                color: #D4703D;
+                width:auto;
+            }
+
+            .button-shop {
+                background: var(--white) 0% 0% no-repeat padding-box;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 2px solid #D4703D;
+                opacity: 1;
+            }
+
+            .button-shopnow {
+                background: var(--primary-brand) 0% 0% no-repeat padding-box;
+                background: #E26A2C 0% 0% no-repeat padding-box;
+                box-shadow: 0px 3px 6px #39373729;
+                opacity: 1;
+                color: #ffffff;
+                border: 2px solid #D4703D;
+            }
+
+        }
+
+    }
+}

@@ -7,6 +7,8 @@
 .img-product{
     height:180px;
     width:100%;
+    object-fit: contain;
+
 }
 .img-box {
     padding:10px;
@@ -30,8 +32,9 @@
       border:1px solid lightgrey;
     }
     .img-product{
-        height:319px;
-        width:100%;
+        height: 196px;
+        width: 100%;
+        object-fit: contain;
     }
     
    

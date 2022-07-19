@@ -4,10 +4,10 @@
 :root {
 
     /* Colors: */
-    --primary-d1: #172BC4;
-    --primary-m1: #336DFF;
-    --primary-brand: #1F39FF;
-    --primary-l1: #3D84FF;
+    // --primary-d1: #172BC4;
+    // --primary-m1: #336DFF;
+    // --primary-brand: #1F39FF;
+    // --primary-l1: #3D84FF;
     --gray-d2: #181C24;
     --gray-d1: #535965;
     --gray-m1: #91959C;
@@ -20,6 +20,21 @@
     --negative-1: #D7373F;
     --unnamed-color-172026: #172026;
     --unnamed-color-1B252C:#1B252C;
+    --primary-d1: #FF8243;
+--primary-m1: #FDA65D;
+--primary-brand: #E26A2C;
+--primary-l1: #FFD07F;
+--gray-d2: #181C24;
+--gray-d1: #535965;
+--gray-m1: #91959C;
+--gray-l2: #B5B7BC;
+--gray-l1: #E5E5E7;
+--white: #FFFFFF;
+--positive-2: #12805C;
+--positive-1: #268E6C;
+--negative-2: #C9252D;
+--negative-1: #D7373F;
+--unnamed-color-172026: #172026;
     
     /* Font/text values */
     --unnamed-font-family-muli: Muli;
@@ -69,12 +84,21 @@
 
     /* border*/
     --unnamed-border-grey:1px solid#D1D3D6;
+
+    /*px*/ 
+    --unnamed-pixel-12:12px;
+    --unnamed-pixel-24:24px;
+    --unnamed-pixel-10:10px;
+    --unnamed-pixel-16:16px;
+    --unnamed-pixel-4:4px;
+    --unnamed-pixel-20:20px;
     }
+    
     
  
     /* Character Styles */
     .display-xl-48-dekstop-only {
-    font-family: var(--unnamed-font-family-source-serif-pro);
+    font-family: var(--unnamed-font-family-muli);
     font-style: var(--unnamed-font-style-normal);
     font-weight: var(--unnamed-font-weight-600);
     font-size: var(--unnamed-font-size-48);
@@ -83,7 +107,7 @@
     color: var(--unnamed-color-172026);
     }
     .display-l-36- {
-    font-family: var(--unnamed-font-family-source-serif-pro);
+    font-family: var(--unnamed-font-family-muli);
     font-style: var(--unnamed-font-style-normal);
     font-weight: var(--unnamed-font-weight-600) !important;
     font-size: var(--unnamed-font-size-36);
@@ -92,7 +116,7 @@
     color: var(--unnamed-color-172026);
     }
     .display-m-24- {
-    font-family: var(--unnamed-font-family-source-serif-pro);
+    font-family: var(--unnamed-font-family-muli);
     font-style: var(--unnamed-font-style-normal);
     font-weight: var(--unnamed-font-weight-600);
     font-size: var(--unnamed-font-size-24);
@@ -101,7 +125,7 @@
     color: var(--unnamed-color-172026);
     }
     .display-s-20- {
-    font-family: var(--unnamed-font-family-source-serif-pro);
+    font-family: var(--unnamed-font-family-muli);
     font-style: var(--unnamed-font-style-normal);
     font-weight: var(--unnamed-font-weight-600);
     font-size: var(--unnamed-font-size-20);
@@ -236,6 +260,9 @@
    .mb-8{
     margin-bottom: var(--unnamed-margin-bottom-8);
    }
+   .mb-125{
+    margin-bottom: 125px;
+   }
    .pt-45{
     padding-top:60px;
    }
@@ -262,6 +289,7 @@
     }
     .text-center{
         text-align: var( --unnamed-text-align-center);
+        text-align: -webkit-center;
     }
     .text-left{
         text-align: var(--unnamed-text-align-left);
@@ -271,6 +299,9 @@
     }
     .border-line {
       border-bottom: var(--unnamed-border-grey);
+    }
+    .position-relative {
+      position: var(--unnamed-display-relative);
     }
      .visible_lg_block{
         display: var(--unnamed-display-none) ;
@@ -282,7 +313,7 @@
         display: var(--unnamed-display-flex);
       }
       .logo-img {
-        width: 120px;
+        width: 112px;
       }
       .display-block-lg{
         display:none ;
@@ -290,8 +321,26 @@
       .display-block-sm{
         display:block;
       }
+      .display-xl-48- {
+        font-family: var(--unnamed-font-family-muli);
+        font-style: var(--unnamed-font-style-normal);
+        font-weight: var(--unnamed-font-weight-600);
+        font-size: var(--unnamed-font-size-36);
+        line-height: var(--unnamed-line-spacing-60);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-172026);
+      }
 
     @include desktop {
+      .display-xl-48- {
+        font-family: var(--unnamed-font-family-muli);
+        font-style: var(--unnamed-font-style-normal);
+        font-weight: var(--unnamed-font-weight-600);
+        font-size: var(--unnamed-font-size-48);
+        line-height: var(--unnamed-line-spacing-60);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-172026);
+      }
       .display-block-lg{
         display:block;
       }
