@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/capstone/static/css/main.787d8286.css",
+    "main.js": "/capstone/static/js/main.9f4a3398.js",
+    "static/media/slider4.jpg": "/capstone/static/media/slider4.530907026bd3a81e4263.jpg",
+    "static/media/banner_image.webp": "/capstone/static/media/banner_image.a23eaa7b7e8d284753fd.webp",
+    "static/media/tshirt.jpg": "/capstone/static/media/tshirt.746b26761fd8addf8ad8.jpg",
+    "static/media/hiking.jpg": "/capstone/static/media/hiking.caef2c4086a47774b804.jpg",
+    "static/media/bangle.jpg": "/capstone/static/media/bangle.30800538fa81ccda8fdb.jpg",
+    "static/media/sweat.png": "/capstone/static/media/sweat.be8a333ac8b292aee147.png",
+    "static/media/materials.png": "/capstone/static/media/materials.ac3c80afb98202d30c79.png",
+    "static/media/Hoodie.jpg": "/capstone/static/media/Hoodie.b64f1c03785586da79eb.jpg",
+    "static/media/feather.png": "/capstone/static/media/feather.5324d928440f0fc00eb7.png",
+    "static/media/breathable.png": "/capstone/static/media/breathable.935733a5ee94b4b80793.png",
+    "static/media/manModel-1.jpg": "/capstone/static/media/manModel-1.bab84bb52b3659d2c889.jpg",
+    "static/media/revicons.eot": "/capstone/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/capstone/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/capstone/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/arrow-down-grey.svg": "/capstone/static/media/arrow-down-grey.5776bce06ead930876f42a7cdf2de865.svg",
+    "static/media/instagram-white.svg": "/capstone/static/media/instagram-white.aed30391d7ee47c71052492025e565cf.svg",
+    "static/media/shopping-bag-white.svg": "/capstone/static/media/shopping-bag-white.0ec7e80fb027fb109f5f6825c655d0f0.svg",
+    "index.html": "/capstone/index.html",
+    "static/media/map-pin.svg": "/capstone/static/media/map-pin.29e5f8c358e4aa7882e2db3c8cddcecf.svg",
+    "static/media/twitter-white.svg": "/capstone/static/media/twitter-white.232117538bec0f6441a12cfefe8cc68b.svg",
+    "static/media/facebook-white.svg": "/capstone/static/media/facebook-white.1c9767c4a18f7f3321bdae3f6d8eacb4.svg",
+    "static/media/edit-orange.svg": "/capstone/static/media/edit-orange.93af904795b54e6811927c1764a1a29a.svg",
+    "main.787d8286.css.map": "/capstone/static/css/main.787d8286.css.map",
+    "main.9f4a3398.js.map": "/capstone/static/js/main.9f4a3398.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.787d8286.css",
+    "static/js/main.9f4a3398.js"
+  ]
+}
