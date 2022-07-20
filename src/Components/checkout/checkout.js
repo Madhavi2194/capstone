@@ -30,14 +30,14 @@ const Checkout = () => {
             [view]: true
         }
         toggleView(data);
-        console.log('temp', activeView);
+        
     }
-    const ViewTab = ({ serialNumber, tabLabel }) => (
+    const ViewTab = ({ sNo, tabLabel }) => (
         
         <section className='container mb-20'>
             <div className='checkout-tab inactive'>
             
-            {`${serialNumber}. ${tabLabel}`}
+            {`${sNo}. ${tabLabel}`}
         </div>
         <hr/>
         </section>
@@ -57,13 +57,13 @@ const Checkout = () => {
                     {activeView[SHIPPING_METHOD] ? (
                         <ShippingMethod clickContinue={() => handleView(PAYMENT_INFO)} ></ShippingMethod> ) :
                         (
-                            <ViewTab serialNumber={2} tabLabel="Shipping Method" />
+                            <ViewTab sNo={2} tabLabel="Shipping Method" />
                         )}
 
                     {activeView[PAYMENT_INFO] ? ( 
                         <PaymentInfo  clickEditMode={() => handleView(SHIPPING_METHOD)}></PaymentInfo>) :
                         (
-                            <ViewTab serialNumber={3} tabLabel="Payment Information" />
+                            <ViewTab sNo={3} tabLabel="Payment Information" />
                         )}
 
                      {activeView[SHIPPING_METHOD] && activeView[SHIPPING_INFO] && activeView[PAYMENT_INFO]  && 

@@ -1,13 +1,14 @@
 import React from 'react';
 import '../Header/header.scss';
 import { useState } from 'react';
+import { useSelector } from "react-redux";
 import shoppingBag from '../../../assests/shopping-bag-white.svg';
-import { NavLink } from "react-router-dom";
+import { NavLink ,Link} from "react-router-dom";
 
 
 const Header = () =>   {
     const [show, setShow] =useState(false);
-    
+    let cart = useSelector((state) => state.cart.cart);
     return (
             <>
                 <header className="container header-wrapper">
@@ -46,14 +47,18 @@ const Header = () =>   {
                                 </div>
                             </div>:null }
 
-                            <div className="nav-icons">
-                                <ul>
-                                    <li className="nav-icon">
-                                       <img src={shoppingBag} alt="shoppingBag"/>
-                                    </li>
-                                </ul>
-                                <div className='cart-counter'>0</div>
+                            <Link to="/cart" >
+                                <div className="nav-icons">
+                                    <ul>
+                                        <li className="nav-icon">
+                                        <img src={shoppingBag} alt="shoppingBag"/>
+                                        </li>
+                                    </ul>
+                                {cart.length > 0 &&  <span className='cart-counter'>{cart.length}</span>}
                             </div>
+                            </Link>
+
+                            
 
                         </div>
                     </nav>
@@ -83,11 +88,11 @@ const Header = () =>   {
                             </li>
                         </ul>
 
-                        <div className="nav-icons">
-                           
+                        <Link to="/cart" > <div className="nav-icons">
                             <img src={shoppingBag} className="cart-bag" alt="shoppingBag"/>
-                            <div className='cart-counter'>0</div>
+                            {cart.length > 0 &&  <span className='cart-counter'>{cart.length}</span>}
                         </div>
+                        </Link>
                     </div>
 
 
