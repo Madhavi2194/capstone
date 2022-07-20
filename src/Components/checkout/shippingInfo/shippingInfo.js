@@ -41,7 +41,7 @@ const ShippingInfo = (props) => {
     return (
         <>
 
-            <section className='container checkout-wrapper mb-24'>
+            <section className=' checkout-wrapper mb-24'>
                 <div className='mb-20 display-m-24-'> <b>Guest Checkout</b></div>
                 <h2><b>Contact Information</b></h2>
                 <p className='mb-16'>

@@ -42,7 +42,7 @@ import { setshippingMethod } from "redux/actions/shippingMethod";
    
     return (
         <div className="mb-24">
-           {isEditMode ? <section className="shipping-method-wrapper container mb-24">
+           {isEditMode ? <section className="shipping-method-wrapper  mb-24">
                 <div >
                     <div className="shipmethod-heading">
                         <h2><b>2. Shipping Method</b></h2>
@@ -77,7 +77,7 @@ import { setshippingMethod } from "redux/actions/shippingMethod";
 
             </section> :
 
-            <section className='paymentinfo-Readonly container'>
+            <section className='paymentinfo-Readonly '>
                 <div className=' paymentinfo-border'>
                     <div className="paymentreadonly-Heading  mb-16">
                         <div><h2><b>Shpping Method</b></h2></div>

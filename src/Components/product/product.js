@@ -1,12 +1,13 @@
-import React, { Fragment } from "react" ;
-import { useSelector } from "react-redux";
+import React from "react" ;
 import '../product/product.scss';
 import {Link} from "react-router-dom";
+import { useSelector  } from "react-redux";
 
 
-function Product() {
-    const products = useSelector((state) => state.allProducts.products);
-   
+
+function Product(props) {
+    const products = props.products;
+    
     const renderList = products.map((product) => {
      
     return (
@@ -24,19 +25,18 @@ function Product() {
                         <p className="product-price">${product.price}</p>
                         <div><img alt="wishlist_icon" src={require("../../assests/heart.png")} /></div>
                     </div>
-                    
-                  
-                   
                 </div>
-
                 
-                 
-              
-                </>
+            </>
+            
 
     )
+    
+     
 });
-return <>{renderList}</>;
+return <>{renderList}
+
+</>;
 };
 
 export default Product; 

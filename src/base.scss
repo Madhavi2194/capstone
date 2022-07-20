@@ -261,7 +261,7 @@
     margin-bottom: var(--unnamed-margin-bottom-8);
    }
    .mb-125{
-    margin-bottom: 125px;
+    margin-bottom: 15px;
    }
    .pt-45{
     padding-top:60px;
@@ -369,5 +369,8 @@
         .border-grey{
             border-bottom: 1px solid var(--gray-l1);
         }
+        .mb-125{
+          margin-bottom: 125px;
+         }
     }
     

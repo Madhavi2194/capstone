@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectedProduct, addTOCart } from '../../redux/actions/productsActions';
 import { useEffect } from 'react';
 import Gallery from '../Gallery/Gallery';
-import loader from '../../assests/loader.gif'
+import loader from '../../assests/loader.gif';
 
 
 
@@ -19,6 +19,9 @@ function ProductDetails() {
     let product = useSelector((state) => state.product);
     const { image, title, price, description } = product;
     const dispatch = useDispatch();
+
+   
+
     const fetchProductDetail = async (id) => {
         const response = await axios
             .get(`https://fakestoreapi.com/products/${id}`)
@@ -44,6 +47,8 @@ function ProductDetails() {
 
 
     }, [productID]);
+
+   
 
     /* Increment decrement */
     let [num, setNum] = useState(1);
@@ -168,6 +173,7 @@ function ProductDetails() {
                     </div>
                 </div> : <center><span><img src={loader} className="loader-img" alt="loader" /></span></center>
             }
+            
         </>
     );
 

@@ -11,6 +11,7 @@ const Ordersummary = () => {
     const ProductshipData = useSelector((state) => state.shippingInfo.shippingInfo);
     const ProductshipMethoddata = useSelector((state) => state.shippingMethod.shippingMethod);
     const productpaymentData = useSelector((state) => state.paymentInfo.paymentInfo);
+    
    
     return (
         <div className="container order">

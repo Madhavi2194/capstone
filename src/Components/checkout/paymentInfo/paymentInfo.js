@@ -42,7 +42,7 @@ const PaymentInfo = (props) => {
     
     return (
         <div className='mb-24'>
-            {isEditMode ? <section className="payment-method-wrapper container">
+            {isEditMode ? <section className="payment-method-wrapper ">
 
                 <div className="shipmethod-heading">
                     <h2><b> 2. Payment Information </b></h2>
@@ -115,7 +115,7 @@ const PaymentInfo = (props) => {
                 </div>
             </section> :
 
-            <section className='paymentinfo-Readonly container'>
+            <section className='paymentinfo-Readonly '>
                 <div className=' paymentinfo-border'>
                 <div className="paymentreadonly-Heading ">
                     <div><h2><b>Payment Information</b></h2></div>

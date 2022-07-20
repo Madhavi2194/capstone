@@ -3,12 +3,12 @@ import "./orderitem.scss";
 import { useSelector } from 'react-redux';
 
 
-const Orderitem = () => {
+const Orderitem = (prop) => {
     const product = useSelector((state) => state.cart.cart);
-    console.log(product,"ayui");
+    
 
     return (
-        <section className='container'>
+        <section className=''>
             <div className='order-item-wrapper'>
                 <b>
                     1 Item in your order

@@ -18,7 +18,7 @@ const Checkout = () => {
         navigate("/Ordersummary")
     }
 
-   const [activeView, toggleView] = useState({
+   const [activeMode, toggleView] = useState({
         [SHIPPING_INFO]: true,
         [SHIPPING_METHOD]: false,
         [PAYMENT_INFO]: false
@@ -26,7 +26,7 @@ const Checkout = () => {
 
     const handleView = (view) => {
         const data = {
-         ...activeView,
+         ...activeMode,
             [view]: true
         }
         toggleView(data);
@@ -34,7 +34,7 @@ const Checkout = () => {
     }
     const ViewTab = ({ sNo, tabLabel }) => (
         
-        <section className='container mb-20'>
+        <section className=' mb-20'>
             <div className='checkout-tab inactive'>
             
             {`${sNo}. ${tabLabel}`}
@@ -51,22 +51,22 @@ const Checkout = () => {
                 <div className='mb-32'><HorizontalBar></HorizontalBar></div>
             </div>
             <div className="aem-Grid aem-Grid--12">
-                <div className='aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--8 aem-GridColumn--phone--12'>
+                <div className='aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--8 aem-GridColumn--phone--12 padding-checkout'>
                     <ShippingInfo clickContinue={() => handleView(SHIPPING_METHOD)} ></ShippingInfo>
                     
-                    {activeView[SHIPPING_METHOD] ? (
+                    {activeMode[SHIPPING_METHOD] ? (
                         <ShippingMethod clickContinue={() => handleView(PAYMENT_INFO)} ></ShippingMethod> ) :
                         (
                             <ViewTab sNo={2} tabLabel="Shipping Method" />
                         )}
 
-                    {activeView[PAYMENT_INFO] ? ( 
+                    {activeMode[PAYMENT_INFO] ? ( 
                         <PaymentInfo  clickEditMode={() => handleView(SHIPPING_METHOD)}></PaymentInfo>) :
                         (
                             <ViewTab sNo={3} tabLabel="Payment Information" />
                         )}
 
-                     {activeView[SHIPPING_METHOD] && activeView[SHIPPING_INFO] && activeView[PAYMENT_INFO]  && 
+                     {activeMode[SHIPPING_METHOD] && activeMode[SHIPPING_INFO] && activeMode[PAYMENT_INFO]  && 
                         <Orderitem ></Orderitem> 
                         }
 
@@ -81,7 +81,7 @@ const Checkout = () => {
                  </div>
 
                 <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--8 aem-GridColumn--phone--12'>
-                {!activeView[SHIPPING_METHOD] && !activeView[PAYMENT_INFO] && <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--5 aem-GridColumn--phone--hide ">
+                {!activeMode[SHIPPING_METHOD] && !activeMode[PAYMENT_INFO] && <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--5 aem-GridColumn--phone--hide ">
                     <section className='sign-in-section'>
                         <div className='aem-Grid aem-Grid--12'>
                             <div className='aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--8 aem-GridColumn--phone--6'>

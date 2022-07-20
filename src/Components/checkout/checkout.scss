@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 .sign-in-section {
     border: 1px solid lightgrey;
     margin-top: var(--unnamed-pixel-20);
@@ -29,4 +31,14 @@
 }
 .margin-heading-checkout {
     margin: 27px 0 16px;
+}
+.padding-checkout {
+    padding: 0 ;
+}
+
+
+@include desktop{
+    .padding-checkout {
+        padding: 0 30px 0 0;
+    }
 }

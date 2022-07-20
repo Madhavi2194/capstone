@@ -4,6 +4,7 @@
 
 
     .order__details {
+        padding: 0 ;
         h2 {
             font: var(--unnamed-font-weight-600);
             letter-spacing: var(--unnamed-character-spacing-0);
@@ -25,7 +26,7 @@
             font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
             letter-spacing: var(--unnamed-character-spacing-0);
             color: var(--gray-d1);
-            width: 50%;
+            width: 100%;
             padding-bottom: 32px;
         }
 
@@ -58,6 +59,17 @@
 @include desktop {
 
     .order {
+        .order__details {
+           padding: 0 32px 0px 0;
+           
+            article {
+                font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+                letter-spacing: var(--unnamed-character-spacing-0);
+                color: var(--unnamed-color-172026);
+                padding-top: 40px;
+    
+        }
+    }
         .adds__section {
             display: block;
             font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-45) ;

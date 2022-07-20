@@ -1,11 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState  } from "react";
 import './productlist.scss';
 import axios from 'axios';
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {setProducts} from '../../redux/actions/productsActions';
 import Productdetails from "../product/product";
 import Sidebar from '../Sidebar/Sidebar';
 import loader from '../../assests/loader.gif';
+import Pagination from "react-js-pagination";
+import { useSelector  } from "react-redux";
+
+
 
 
 
@@ -14,6 +18,19 @@ import loader from '../../assests/loader.gif';
 function ProductList() {
   const products = useSelector((state) => state.allProducts.products);
   const dispatch = useDispatch();
+ 
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 9;
+
+    
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentProducts = products.slice(indexOfFirstPost, indexOfLastPost);
+    
+
   const fetchProducts = async () => {
     const response = await axios
       .get("https://fakestoreapi.com/products")
@@ -28,9 +45,12 @@ function ProductList() {
   }, []);
 
   
+
+  
+  
        
         return(
-          
+          <>
           <div className= "container grid-wrapper">
            
             <div className="grid-child-sidebar">
@@ -41,15 +61,29 @@ function ProductList() {
                    
               {products.length != 0 ? 
               <div className="grid-container-inner"  >
-                <Productdetails/>
+                <Productdetails  products={currentProducts} />
               </div>
                : <center><span><img src={loader} className="loader-img" alt="loader"/></span></center>
-
+                
               }
             </div>
+           
+            
             </div>
+
+              <div className="pagination-background">
+              <Pagination
+                  itemsCountPerPage={postsPerPage}
+                  activePage={currentPage}
+                  totalItemsCount={products.length}
+                  onChange={handlePageChange}
+                  hideFirstLastPages={true}
+                  itemClass="page-item"
+                  linkClass="page-link"
+              />
+              </div>
           
-          
+          </>
         )
 
     
