@@ -12,9 +12,6 @@ function Home() {
         <Category></Category>
         <HomeBanner></HomeBanner>
         <HomebannerSection></HomebannerSection>
-        
-      
-        
     </div>
  )
         
