@@ -1,6 +1,6 @@
 ## CAPSTONE APP
 
-This website is hosted at  [Venia](https://madhavi2194.github.io/capstone/).
+This website is hosted at  [Capstone](https://madhavi2194.github.io/capstone/).
 
 ## About CAPSTONE App
 
