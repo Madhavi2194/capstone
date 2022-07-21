@@ -50,7 +50,7 @@ function ProductList() {
   
        
         return(
-          <>
+          <div>
           <div className= "container grid-wrapper">
            
             <div className="grid-child-sidebar">
@@ -60,30 +60,32 @@ function ProductList() {
             <div className="grid-child-product">
                    
               {products.length != 0 ? 
+       
               <div className="grid-container-inner"  >
                 <Productdetails  products={currentProducts} />
-              </div>
+               </div>
+              
                : <center><span><img src={loader} className="loader-img" alt="loader"/></span></center>
-                
+              
               }
             </div>
-           
+            
             
             </div>
-
-              <div className="pagination-background">
-              <Pagination
-                  itemsCountPerPage={postsPerPage}
-                  activePage={currentPage}
-                  totalItemsCount={products.length}
-                  onChange={handlePageChange}
-                  hideFirstLastPages={true}
-                  itemClass="page-item"
-                  linkClass="page-link"
-              />
-              </div>
+            <div className="pagination-background">
+                  <Pagination
+                      itemsCountPerPage={postsPerPage}
+                      activePage={currentPage}
+                      totalItemsCount={products.length}
+                      onChange={handlePageChange}
+                      hideFirstLastPages={true}
+                      itemClass="page-item"
+                      linkClass="page-link"
+                  />
+              </div> 
+           
           
-          </>
+          </div>
         )
 
     

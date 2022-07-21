@@ -23,7 +23,7 @@ return(
 
            </div>
             <div className="product-banner-mappin">
-            <img src={mappin} className="mb-8"/>
+            <img src={mappin} className="mb-8" alt ="locationpin"/>
             <div className="product-horizontal-bar"></div>
             
             </div>

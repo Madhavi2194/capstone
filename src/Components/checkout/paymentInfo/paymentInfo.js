@@ -76,7 +76,7 @@ const PaymentInfo = (props) => {
                             <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--4 aem-GridColumn--phone--12'>
                                 <div className="form-group">
                                     <label className="checkout-lable" htmlFor=""> Expiration Date</label>
-                                    <input className="checkout-input-box" type="text" id="expDate" name="expDate" value={PaymentInfo_state.expDate} onChange ={setFormdata} />
+                                    <input className="checkout-input-box" type="date" id="expDate" name="expDate" value={PaymentInfo_state.expDate} onChange ={setFormdata} />
                                 </div>
                             </div>
 
