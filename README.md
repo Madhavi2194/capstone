@@ -1,8 +1,8 @@
-## VENIA APP
+## CAPSTONE APP
 
-This website is hosted at  [Venia](https://madhavi2194.github.io/venia/).
+This website is hosted at  [Venia](https://madhavi2194.github.io/capstone/).
 
-## About Venia App
+## About CAPSTONE App
 
 This is Ecommerce Website build with ReactJs library, HTML, CSS, and ES6:
 
@@ -26,10 +26,12 @@ NPM - V8.1.2
 ### `Lighthouse Report`
 
 ## Mobile Report
-![Lighthouse_venia_mobile](https://user-images.githubusercontent.com/102793225/175531595-722d91a9-4df1-4345-bea6-b8ac5a254ad0.PNG)
+![Capstone-mobile-lighthousereport](https://user-images.githubusercontent.com/102793225/180183261-1ddf7ae5-5122-4068-8bd5-5a2e86392655.PNG)
+
 
 
 ## Desktop Report
-![Lighthouse_venia_desktop](https://user-images.githubusercontent.com/102793225/175531663-b0720d3c-dcb1-4d4e-a156-ba3f854334c8.PNG)
+![Capstone-desktop-lighthousereport](https://user-images.githubusercontent.com/102793225/180183221-a3d95d2a-de89-457a-8b36-4a8bf562d6bf.PNG)
+
 
 
