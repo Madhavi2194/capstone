@@ -32,7 +32,7 @@ const Checkout = () => {
         toggleView(data);
         
     }
-    const ViewTab = ({ sNo, tabLabel }) => (
+    const MethodTab = ({ sNo, tabLabel }) => (
         
         <section className=' mb-20'>
             <div className='checkout-tab inactive'>
@@ -57,13 +57,13 @@ const Checkout = () => {
                     {activeMode[SHIPPING_METHOD] ? (
                         <ShippingMethod clickContinue={() => handleView(PAYMENT_INFO)} ></ShippingMethod> ) :
                         (
-                            <ViewTab sNo={2} tabLabel="Shipping Method" />
+                            <MethodTab sNo={2} tabLabel="Shipping Method" />
                         )}
 
                     {activeMode[PAYMENT_INFO] ? ( 
                         <PaymentInfo  clickEditMode={() => handleView(SHIPPING_METHOD)}></PaymentInfo>) :
                         (
-                            <ViewTab sNo={3} tabLabel="Payment Information" />
+                            <MethodTab sNo={3} tabLabel="Payment Information" />
                         )}
 
                      {activeMode[SHIPPING_METHOD] && activeMode[SHIPPING_INFO] && activeMode[PAYMENT_INFO]  && 

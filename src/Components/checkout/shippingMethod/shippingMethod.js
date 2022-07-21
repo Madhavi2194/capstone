@@ -6,7 +6,7 @@ import { useDispatch,useSelector } from "react-redux";
 import { setshippingMethod } from "redux/actions/shippingMethod";
 
     const ShippingMethod = (props) => {
-    const [isEditMode , toggleEditMode] = useState(true);
+    const [isEditview , toggleEditMode] = useState(true);
     const {handleSubmit } = useForm({ shouldUnregister: false });
 
     const shippingMethod_Store = useSelector((state) => state.shippingMethod.shippingMethod);
@@ -42,7 +42,7 @@ import { setshippingMethod } from "redux/actions/shippingMethod";
    
     return (
         <div className="mb-24">
-           {isEditMode ? <section className="shipping-method-wrapper  mb-24">
+           {isEditview ? <section className="shipping-method-wrapper  mb-24">
                 <div >
                     <div className="shipmethod-heading">
                         <h2><b>2. Shipping Method</b></h2>

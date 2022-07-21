@@ -15,7 +15,7 @@ const Header = () =>   {
                     <nav className="">
                         <div className=" navbar visible_flex-display visible_lg_none">
                             <button className='' onClick={()=>setShow(!show)}>
-                                <img className="Hamburger" alt="Hambuger" src={require("../../../assests/menu.png")} />
+                                <img className="Hamburger" alt="Hambuger" src={require("../../../assests/hambuger-white.png")} />
                             </button>
                             <div className="navbar-brand" >
                             <NavLink to={'/capstone'}>

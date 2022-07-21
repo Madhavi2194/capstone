@@ -60,19 +60,12 @@ function ProductList() {
             <div className="grid-child-product">
                    
               {products.length != 0 ? 
-       
-              <div className="grid-container-inner"  >
-                <Productdetails  products={currentProducts} />
-               </div>
-              
-               : <center><span><img src={loader} className="loader-img" alt="loader"/></span></center>
-              
-              }
-            </div>
-            
-            
-            </div>
-            <div className="pagination-background">
+              <div>
+                <div className="grid-container-inner"  >
+                  <Productdetails  products={currentProducts} />
+                  
+                </div>
+                  <div className="pagination-background">
                   <Pagination
                       itemsCountPerPage={postsPerPage}
                       activePage={currentPage}
@@ -83,6 +76,17 @@ function ProductList() {
                       linkClass="page-link"
                   />
               </div> 
+           </div>
+              
+               : <center><span><img src={loader} className="loader-img" alt="loader"/></span></center>
+               
+              
+              }
+            </div>
+            
+            
+            </div>
+            
            
           
           </div>

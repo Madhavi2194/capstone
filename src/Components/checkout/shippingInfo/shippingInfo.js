@@ -7,7 +7,7 @@ import { setshippingInfo } from 'redux/actions/shippingInfo';
 
 
 const ShippingInfo = (props) => {
-    const [isEditMode, toggleEditMode] = useState(true);
+    const [isEditview, toggleEditMode] = useState(true);
     const shippingInfo_Store = useSelector((state) => state.shippingInfo.shippingInfo);
     const [ShippingInfo_state,Set_ShippingInfo_state]  = useState(shippingInfo_Store);
     let dispatch = useDispatch();
@@ -23,6 +23,7 @@ const ShippingInfo = (props) => {
     const onEdit = () => {
         toggleEditMode(true);
     }
+
     const setFormdata = (ev) =>{
         let {value, name} = ev.target;
         Set_ShippingInfo_state(
@@ -47,7 +48,7 @@ const ShippingInfo = (props) => {
                 <p className='mb-16'>
                     We'll use there details to keep you informed on your delivery.
                 </p>
-                {isEditMode ? <form action="" onSubmit={handleSubmit(onSubmit)} >
+                {isEditview ? <form action="" onSubmit={handleSubmit(onSubmit)} >
                     <div className='aem-Grid aem-Grid--12'>
                         <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6 aem-GridColumn--phone--12'>
                             <div className="form-group">

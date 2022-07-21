@@ -8,7 +8,7 @@ import { setpaymentInfo } from 'redux/actions/paymentMethod';
 
 
 const PaymentInfo = (props) => {
-    const [isEditMode , toggleEditMode] = useState(true); 
+    const [isEditview , toggleEditMode] = useState(true); 
 
     const paymentInfo_Store = useSelector((state) => state.paymentInfo.paymentInfo);
     const [PaymentInfo_state,Set_PaymentInfo_state]  = useState( paymentInfo_Store);
@@ -42,7 +42,7 @@ const PaymentInfo = (props) => {
     
     return (
         <div className='mb-24'>
-            {isEditMode ? <section className="payment-method-wrapper ">
+            {isEditview ? <section className="payment-method-wrapper ">
 
                 <div className="shipmethod-heading">
                     <h2><b> 2. Payment Information </b></h2>
