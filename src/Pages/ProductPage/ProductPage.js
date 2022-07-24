@@ -6,7 +6,6 @@ import ProductDetails from "../../Components/ProductDetails/ProductDetails"
 function ProductPage() {
     return (
         <div>
-
          <ProductDetails></ProductDetails>
         </div>
     )
