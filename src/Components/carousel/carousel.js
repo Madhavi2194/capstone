@@ -34,7 +34,7 @@ const HomeCarousel = () => {
                 <div className="">Signature Collection</div>
               </div>
               <p className="mb-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna.</p>
-              <NavLink to={'/product'}>
+              <NavLink to={'/product/all'}>
                 <button className="carousel-button">SHOP NOW</button>
                 </NavLink>
             </div>
@@ -47,7 +47,7 @@ const HomeCarousel = () => {
                 <div className="">Signature Collection</div>
               </div>
               <p className="mb-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna.</p>
-               <NavLink to={'/product'}>
+               <NavLink to={'/product/all'}>
                  <button className="carousel-button">SHOP NOW</button>
               </NavLink>
             </div>

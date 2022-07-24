@@ -38,7 +38,7 @@ class Footer extends React.Component {
                             
                         </div>
                         <div className="footer-division">
-                            <h4>Folloe Us !</h4>
+                            <h4>Follow Us !</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
                                     <div className="social_icon">
                                     <div className="icon"><img src={instagram}  className="insta"  alt="instagram-icon" /></div>

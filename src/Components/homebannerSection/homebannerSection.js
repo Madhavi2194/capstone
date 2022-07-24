@@ -17,7 +17,7 @@ return(
            <div className="product-banner-conquer">
             <h2> Conquer your Next Adventure</h2>
             <div className="subheading mb-32">lorem ipsum</div>
-            <NavLink to={'/product'}>
+            <NavLink to={'/product/all'}>
                 <button className="banner-button">SHOP DEVICES</button>
            </NavLink>
 

@@ -19,10 +19,10 @@ const HomeBanner = () => {
                     <div className="regular-heading-20 mb-16">Lorem Ipsum Dolor Tempor</div>
                     <div className="regualr-heading-16 mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna.</div>
                     <div className="button-wrapper">
-                        <NavLink to={'/product'}>
+                        <NavLink to={'/product/all'}>
                             <button className="btn button-shop">SHOP COLLECTION</button>
                         </NavLink>
-                        <NavLink to={'/product'}>
+                        <NavLink to={'/product/all'}>
                             <button className=" btn button-shopnow">SHOP NOW</button>
                         </NavLink>
                     </div>

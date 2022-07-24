@@ -7,12 +7,14 @@ import {useSelector} from "react-redux";
 function PricingSummary() {
     
     const checkoutPage = useMatch('/checkout');
-    // const getPrice = (isFree, isDiscount, price) => isFree ? 'FREE' : isDiscount ? `- $ ${price?.toFixed(2)}` : `$ ${price?.toFixed(2)}`;
+   
     
     const  getPercentageValue = (discount, price) => {
         const discountedValue = price - (price * (discount/100));
+        console.log("v",discountedValue);
         return discountedValue < 0 ? discountedValue : discountedValue;
      } 
+     
      const [subTotal, setSubTotal] = useState(0);
     const [coupon, setCoupon] = useState(0);
     const [giftCard, setGiftCardValue] = useState(0);
@@ -62,7 +64,7 @@ function PricingSummary() {
                         <p>Coupon</p>
                     </div>
                     <div className="Coupon-amt">
-                        <p>$ {coupon}  </p>
+                        <p>$ {coupon.toFixed(2)}  </p>
                     </div>
                 </div>
                 <div className="pricing-content">
@@ -78,7 +80,7 @@ function PricingSummary() {
                         <p>Estimated tax</p>
                     </div>
                     <div className="Estimated-tax-amt">
-                        <p>$ {estimatedTax}</p>
+                        <p>$ {estimatedTax.toFixed(2)}</p>
                     </div>
                 </div>
                 <div className="pricing-content">
@@ -94,7 +96,7 @@ function PricingSummary() {
                         <p>Estimated Total</p>
                     </div>
                     <div className="Estimated-Total-amt">
-                        <p>$ {getEstimatedTotal()}</p>
+                        <p>$ {getEstimatedTotal().toFixed(2)}</p>
                     </div>
                 </div>
                 {!checkoutPage &&  <Button ></Button> }

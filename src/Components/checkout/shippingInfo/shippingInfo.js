@@ -90,8 +90,6 @@ const ShippingInfo = (props) => {
         )
     }
 
-
-
     return (
         <>
 

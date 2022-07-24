@@ -33,7 +33,6 @@ function ProductDetails() {
 
     const navigateCart = () => {
         let item = { ...product, quantity: num }
-        debugger;
         dispatch(addTOCart(item))
         navigate("/cart")
     }
