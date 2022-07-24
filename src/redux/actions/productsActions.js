@@ -14,11 +14,21 @@ export const selectedProduct = (product) => {
   };
 };
 
-export const removeSelectedProduct = () => {
+export const removeSelectedProduct = (payload) => {
   return {
     type: ActionTypes.REMOVE_SELECTED_PRODUCT,
+    payload,
   };
 };
+
+export const setWishlist = (payload) => {
+  return {
+    type: ActionTypes.SET_WISHLIST,
+    payload,
+  };
+};
+
+
 
 export const addTOCart = (payload) => {
   return {

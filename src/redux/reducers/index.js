@@ -3,6 +3,7 @@ import { productsReducer, selectedProductsReducer, cartReducer } from "./product
 import { shippingInfoReducer } from "./shippinginfoReducer";
 import { shippingMethodReducer } from "./shippingmethodReducer";
 import { paymentInfoReducer } from "./paymentmethodReducer";
+
 const reducers = combineReducers({
   allProducts: productsReducer,
   product: selectedProductsReducer,
@@ -10,5 +11,7 @@ const reducers = combineReducers({
   shippingInfo:shippingInfoReducer,
   shippingMethod:shippingMethodReducer,
   paymentInfo:paymentInfoReducer,
+  
+ 
 });
 export default reducers;

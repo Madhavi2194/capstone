@@ -9,6 +9,12 @@ import { NavLink ,Link} from "react-router-dom";
 const Header = () =>   {
     const [show, setShow] =useState(false);
     let cart = useSelector((state) => state.cart.cart);
+    let cartCount = 0;
+    let cartLen = Number(cart.map(r => r.quantity).reduce((p, c) => {
+         cartCount = cartCount + c;
+         return cartCount;
+        }, 0));
+    console.log("cartl",cartLen)
     return (
             <>
                 <header className="container header-wrapper">
@@ -54,7 +60,7 @@ const Header = () =>   {
                                         <img src={shoppingBag} alt="shoppingBag"/>
                                         </li>
                                     </ul>
-                                {cart.length > 0 &&  <span className='cart-counter'>{cart.length}</span>}
+                                {cart &&  <span className='cart-counter'>{cart ? cartLen : 0 }</span>}
                             </div>
                             </Link>
 
@@ -84,13 +90,13 @@ const Header = () =>   {
                                 Electronic 
                             </li>
                             <li className="nav-item">
-                                Jwellary
+                              Jewellery
                             </li>
                         </ul>
 
                         <Link to="/cart" > <div className="nav-icons">
                             <img src={shoppingBag} className="cart-bag" alt="shoppingBag"/>
-                            {cart.length > 0 &&  <span className='cart-counter'>{cart.length}</span>}
+                            {cart &&  <span className='cart-counter'>{cart ? cartLen : 0}</span>}
                         </div>
                         </Link>
                     </div>

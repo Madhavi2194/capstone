@@ -16,7 +16,7 @@
  }
 .product-price{
     margin:0 ;
-    padding-bottom: 17px;
+    padding-bottom: 8px;
 }
 .title-section{
     padding-top: 8px;
@@ -36,6 +36,7 @@
         width: 100%;
         object-fit: contain;
     }
+    
     .pagination {
         margin: 0;
         align-items: center;
@@ -60,6 +61,21 @@
         }
         
     }
+    .product__heart--icon{
+        background-image: url(../../assests/heart.svg);
+        background-repeat: no-repeat;
+        height: 26px;
+        margin-top: 5px;
+        width: 30px;
+    }
+
+    .product__heart--icon--red{
+        background-image: url(../../assests/heart-red.svg);
+        background-repeat: no-repeat;
+        height: 26px;
+        margin-top: 5px;
+        width: 30px;
+    } 
     
 
 }

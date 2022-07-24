@@ -14,7 +14,6 @@ import { setshippingMethod } from "redux/actions/shippingMethod";
     let dispatch = useDispatch();
 
     const onSubmit = (data) => {
-      
         toggleEditMode(false);
         props.clickContinue();
         console.log("b",data); 
@@ -50,17 +49,17 @@ import { setshippingMethod } from "redux/actions/shippingMethod";
                     <div className="radio-btn">
                         <form className="shipping-method-form-section" onSubmit={handleSubmit(onSubmit)}>
                             <div className="first-btn">
-                                <input type="radio" id="stdshipping" className="shipping-radio-btn" name="shippingtype"  value= "Standard Shipping (4-8 business days via USPS) FREE" onChange ={setFormdata} />
+                                <input type="radio" id="stdshipping" className="shipping-radio-btn" name="shippingtype" checked={ShippingMethod_state.shippingtype ===  "Standard Shipping (4-8 business days via USPS) FREE"} value = "Standard Shipping (4-8 business days via USPS) FREE"  onChange ={setFormdata} />
                                 <label htmlFor="html" className="shipping-method-btn-txt">Standard Shipping (4-8 business days via USPS) FREE</label>
                             </div>
                             <div className="first-btn">
 
-                                <input type="radio" id="html"  className="shipping-radio-btn" name="shippingtype"  value="Express Delivery (2-5 business days via USPS) $17.95" onChange ={setFormdata}/>
+                                <input type="radio" id="expdelivery"  className="shipping-radio-btn" name="shippingtype"  value="Express Delivery (2-5 business days via USPS) $17.95"   onChange ={setFormdata}/>
                                 <label htmlFor="html" className="shipping-method-btn-txt">Express Delivery (2-5 business days via USPS) $17.95</label>
                             </div>
                             <div className="first-btn">
 
-                                <input type="radio" id="html" className="shipping-radio-btn" name="shippingtype"  value= "Next Day Delivery (Next business days via FedEx) $53.61" onChange ={setFormdata}/>
+                                <input type="radio" id="nextdaydelivery" className="shipping-radio-btn" name="shippingtype"  value= "Next Day Delivery (Next business days via FedEx) $53.61"   onChange ={setFormdata}/>
                                 <label htmlFor="html" className="shipping-method-btn-txt">Next Day Delivery (Next business days via FedEx) $53.61</label>
                             </div>
 
@@ -79,7 +78,7 @@ import { setshippingMethod } from "redux/actions/shippingMethod";
 
             <section className='paymentinfo-Readonly '>
                 <div className=' paymentinfo-border'>
-                    <div className="paymentreadonly-Heading  mb-16">
+                    <div className="paymentreadonly-Heading ">
                         <div><h2><b>Shpping Method</b></h2></div>
                         <div>
                             <span><img src={edit} className="edit-image" alt="editicon" onClick={()=>onEdit()} /></span> &nbsp;

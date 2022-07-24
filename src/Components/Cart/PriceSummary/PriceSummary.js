@@ -1,13 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../PriceSummary/PriceSummary.scss';
 import Button from "Components/Button/button";
 import { useMatch} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 function PricingSummary() {
     
     const checkoutPage = useMatch('/checkout');
+    // const getPrice = (isFree, isDiscount, price) => isFree ? 'FREE' : isDiscount ? `- $ ${price?.toFixed(2)}` : `$ ${price?.toFixed(2)}`;
     
-  
+    const  getPercentageValue = (discount, price) => {
+        const discountedValue = price - (price * (discount/100));
+        return discountedValue < 0 ? discountedValue : discountedValue;
+     } 
+     const [subTotal, setSubTotal] = useState(0);
+    const [coupon, setCoupon] = useState(0);
+    const [giftCard, setGiftCardValue] = useState(0);
+    const [estimatedTax, setEstimatedTax] = useState(0);
+    const [isFree, setIsFree] = useState(true);
+
+    const cartItems = useSelector(store => store.cart.cart);
+
+
+    useEffect(() => {
+        let total = 0;
+        cartItems.forEach(item => {
+            total = total + (item.price*item.quantity);
+        });
+
+        setSubTotal(total);
+        setCoupon(total - getPercentageValue(20, total));
+        setGiftCardValue(total > 150 ? 100 : 0);
+        setEstimatedTax(total - getPercentageValue(5, total));
+        setIsFree(total > 500);
+
+    }, [cartItems]);
+
+
+    const getEstimatedTotal = () => {
+        const es = isFree ? 0 : 50;
+        return subTotal - coupon - giftCard + estimatedTax + es;
+    }
+   
 
     return (
         <section>
@@ -20,7 +54,7 @@ function PricingSummary() {
                         <p>Subtotal</p>
                     </div>
                     <div className="Subtotal-amt">
-                        <p>$ 388.00</p>
+                        <p>$ {subTotal}</p>
                     </div>
                 </div>
                 <div className="pricing-content">
@@ -28,7 +62,7 @@ function PricingSummary() {
                         <p>Coupon</p>
                     </div>
                     <div className="Coupon-amt">
-                        <p>- $ 77.60</p>
+                        <p>$ {coupon}  </p>
                     </div>
                 </div>
                 <div className="pricing-content">
@@ -36,7 +70,7 @@ function PricingSummary() {
                         <p>Gift Card</p>
                     </div>
                     <div className="Gift-Card-amt">
-                        <p>- $ 100.00</p>
+                        <p>$ {giftCard} </p>
                     </div>
                 </div>
                 <div className="pricing-content">
@@ -44,7 +78,7 @@ function PricingSummary() {
                         <p>Estimated tax</p>
                     </div>
                     <div className="Estimated-tax-amt">
-                        <p>$ 23.28</p>
+                        <p>$ {estimatedTax}</p>
                     </div>
                 </div>
                 <div className="pricing-content">
@@ -52,7 +86,7 @@ function PricingSummary() {
                         <p>Estimated shipping</p>
                     </div>
                     <div className="Estimated-tax-amt">
-                        <p>FREE</p>
+                        <p>$ {isFree ? 0 : 50}</p>
                     </div>
                 </div>
                 <div className="pricing-content">
@@ -60,7 +94,7 @@ function PricingSummary() {
                         <p>Estimated Total</p>
                     </div>
                     <div className="Estimated-Total-amt">
-                        <p>$ 233.68</p>
+                        <p>$ {getEstimatedTotal()}</p>
                     </div>
                 </div>
                 {!checkoutPage &&  <Button ></Button> }

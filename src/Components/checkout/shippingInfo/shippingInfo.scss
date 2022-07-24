@@ -31,7 +31,7 @@ section{
             opacity: 1;
             width: 100%;
             height: 44px;
-            margin-bottom: 20px;
+            margin-bottom: 8px;
             padding:8px 16px;
         }
         .checkout-selectbox {
@@ -43,8 +43,13 @@ section{
             opacity: 1;
             width: 100%;
             height: 40px;
-            margin-bottom: 20px;
+            margin-bottom: 8px;
             padding:8px 16px;
+        }
+        .erroe-msg{
+            color:red;
+            margin-bottom:5px;
+            font-size: 12px;
         }
         .shipping-method-heading ,
         .payment-method-heading {
@@ -77,6 +82,9 @@ section{
                 display: flex;
                 justify-content: space-between;
             }
+            h2{
+                margin-bottom: 10px;
+            }
             
         }
         .shippinginfor-border{
@@ -99,6 +107,16 @@ section{
         .w-50{
             width:100% ;
         }
+        .Shippinginfo-Readonly{
+            .shippingreadonly-Heading{
+                display: flex;
+                justify-content: space-between;
+            }
+            h2{
+                margin-bottom: 10px;
+            }
+            
+        }
         .checkout-input-box{
             background: var(--white) 0% 0% no-repeat padding-box;
             border: 2px solid var(--gray-l2);
@@ -108,7 +126,7 @@ section{
             opacity: 1;
             width: 100%;
             height: 44px;
-            margin-bottom: 20px;
+            margin-bottom: 8px;
             padding:8px 16px;
         }
         .checkout-selectbox{
@@ -120,13 +138,17 @@ section{
             opacity: 1;
             width: 100%;
             height: 40px;
-            margin-bottom: 20px;
+            margin-bottom: 8px;
             padding:8px 16px;
         }
         .checkout-lable{
             display: block;
             font-weight: 600;
             margin-bottom: 4px;
+        }
+        .erroe-msg{
+            color:red;
+            margin-bottom:5px;
         }
         .form-group {
             margin-right:20px;

@@ -4,6 +4,7 @@ import { useState } from "react";
 
  const Sidebar = () => {
     const [show, setShow] =useState(false);
+    // const products = useSelector((state) => state.allProducts.products);
   
         return (
             <section className="sidebar">
@@ -27,7 +28,7 @@ import { useState } from "react";
                         <ul>
                             <li>
                                 <input type="checkbox" id="option1" name="option1" value="Option1" />
-                                <label htmlFor="option1">Jewelery</label>
+                                <label htmlFor="option1">Jewellery</label>
                             </li>
                             <li>
                                 <input type="checkbox" id="option2" name="option2" value="Option2" />
@@ -56,7 +57,7 @@ import { useState } from "react";
                         <ul>
                             <li>
                                 <input type="checkbox" id="option19" name="option19" value="Option19" />
-                                <label htmlFor="option19">Jewelery</label>
+                                <label htmlFor="option19">Jewellery</label>
                             </li>
                             <li>
                                 <input type="checkbox" id="option20" name="option20" value="Option20" />

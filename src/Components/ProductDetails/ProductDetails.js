@@ -33,6 +33,7 @@ function ProductDetails() {
 
     const navigateCart = () => {
         let item = { ...product, quantity: num }
+        debugger;
         dispatch(addTOCart(item))
         navigate("/cart")
     }
@@ -88,7 +89,7 @@ function ProductDetails() {
                             <div className='regular-heading-l-20- pt-16'><b>{title}</b></div>
                             <p className='display-s-20- mb-16'>$ {price}</p>
 
-                            <span className='mb-16'><img src={require("../../assests/heart.png")} alt="wishlist-icon" /></span>
+                            
                             <p className='regular-heading-m-16- mb-16 border-line pt-18 '>{product.description}</p>
                             <p className='product-title-detail mb-16'>Color</p>
 

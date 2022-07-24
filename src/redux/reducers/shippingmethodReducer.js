@@ -1,6 +1,7 @@
 const shippingMethodIntialState = {
     shippingMethod: {
-        shippingtype:"",
+        shippingtype:
+         "Standard Shipping (4-8 business days via USPS) FREE"
        
      }
   };

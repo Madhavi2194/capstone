@@ -26,6 +26,7 @@ function ProductList() {
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
+    
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentProducts = products.slice(indexOfFirstPost, indexOfLastPost);

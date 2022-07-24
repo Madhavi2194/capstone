@@ -1,6 +1,7 @@
 import React from "react";
-import { useSelector } from "react-redux/es/exports";
-import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux/es/exports";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import '../CartItem/CartItem.scss';
 import minus from '../../../assests/minus-circle.png';
 import plus from '../../../assests/plus-circle.png';
@@ -10,15 +11,28 @@ import trash from '../../../assests/trash-2.png';
 import elipsis from '../../../assests/more-horizontal.png';
 import PricingSummary from "../PriceSummary/PriceSummary";
 import Accordion from "../Accordion/accordion";
+import { removeSelectedProduct } from "redux/actions/productsActions";
 
 
 function CartItem() {
 
     const addCart = useSelector((state) => state.cart.cart);
+    let [ selectedPro, setSelectedPro ] = useState(addCart);
     //Quantity IncDec start
     const [num, setQuantity] = useState(1);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        if (addCart) {
+            setSelectedPro(addCart)
+        }
+        else {
+            setSelectedPro([]);
+        }
+    }, [addCart])
 
     const handleDecrement = () => {
+        
         if (num > 1) {
             setQuantity(prevCount => prevCount - 1);
 
@@ -26,39 +40,45 @@ function CartItem() {
     }
 
     const handleIncrement = () => {
+       
         if (num < 10) {
             setQuantity(prevCount => prevCount + 1);
         }
+        
     }
+    const removeitem = (item) => {
+        dispatch(removeSelectedProduct(item));
+    }
+
 
 
     const accordionData = [
         {
-          title: 'Estimate your Shipping ',
-          content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
+            title: 'Estimate your Shipping ',
+            content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
           laborum cupiditate possimus labore, hic temporibus velit dicta earum
           suscipit commodi eum enim atque at? Et perspiciatis dolore iure
           voluptatem.`,
-          subcontent:`Shipping to 91001`
+            subcontent: `Shipping to 91001`
         },
         {
-          title: 'Enter a Coupon Code ',
-          content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
+            title: 'Enter a Coupon Code ',
+            content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
           reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
           quaerat iure quos dolorum accusantium ducimus in illum vero commodi
           pariatur? Impedit autem esse nostrum quasi, fugiat a aut error cumque
           quidem maiores doloremque est numquam praesentium eos voluptatem amet!
           Repudiandae, mollitia id reprehenderit a ab odit!`,
-          subcontent:`20% discount applied`
+            subcontent: `20% discount applied`
         },
         {
-          title: 'Apply Gift Card ',
-          content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
+            title: 'Apply Gift Card ',
+            content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
           quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
           dolor ut sequi minus iste? Quas?`
-          
+
         }
-      ];
+    ];
 
     const ProductList = (product) => {
         let total = +(product.price * product.quantity);
@@ -66,7 +86,7 @@ function CartItem() {
         return (
             <section key={product.id}>
                 <div className="aem-Grid aem-Grid--default--12 aem-Grid--phone--1">
-                    <div  className="cart-section  aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--1 ">
+                    <div className="cart-section  aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--1 ">
                         <img src={product.image} className="cartimg" alt={product.title} />
                         <div >
                             <h5>{product.title}</h5>
@@ -99,11 +119,12 @@ function CartItem() {
 
                         <div className="action-section display-block-lg">
                             <div className="action-edit">
-                                <span><img src={edit} className="edit-img" alt="edit-icon" /></span>  &nbsp;
-                                <span>Edit</span>
+                                <Link to={`/product/${product.id}`} ><span><img src={edit} className="edit-img" alt="edit-icon" /></span>  &nbsp;
+                                    <span>Edit</span>
+                                </Link>
                             </div>
                             <div className="action-delete">
-                                <span><img src={trash} className="edit-img" alt="delete-icon" /></span> &nbsp;
+                                <span><img src={trash} className="edit-img" alt="delete-icon" onClick={() => removeitem(product)} /></span> &nbsp;
                                 <span>Delete</span>
                             </div>
                             <div className="action-wishlist">
@@ -128,19 +149,21 @@ function CartItem() {
                             <div className="horizontal-bar"></div>
                         </div>
                         <div className="cart-section-details aem-Grid aem-Grid--default--12 aem-Grid--phone--1">
-                            <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--1">
-                                {addCart.map(ProductList)}
+                            
+                                <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--1">
+                                    {selectedPro.length != 0 ?  selectedPro.map(ProductList) : "No Data Found"}
 
 
-                                <div className="aem-Grid aem-Grid--default--12 aem-Grid--phone--1">
-                                    
-                                    <div className="accordion">
-                                    {accordionData.map(({ title, content, subcontent }) => (
-                                    <Accordion title={title} content={content}subcontent={subcontent} />
-                                    ))}
-                                </div>
-                                </div>
-                            </div>
+                                    <div className="aem-Grid aem-Grid--default--12 aem-Grid--phone--1" >
+
+                                        <div className="accordion">
+                                            {accordionData.map(({ title, content, subcontent }) => (
+                                                <Accordion title={title} content={content} subcontent={subcontent} />
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div> 
+
 
                             <div className=" aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--1">
                                 <div className="pricing">
@@ -148,6 +171,7 @@ function CartItem() {
                                 </div>
                             </div>
                         </div>
+
 
                     </section>
 

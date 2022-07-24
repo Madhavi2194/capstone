@@ -5,18 +5,18 @@ import ShippingMethod from 'Components/checkout/shippingMethod/shippingMethod';
 import PaymentInfo from 'Components/checkout/paymentInfo/paymentInfo';
 import Orderitem from './orderItem/orderitem';
 import "./checkout.scss";
-import { useNavigate,NavLink } from "react-router-dom";
+// import { useNavigate,NavLink } from "react-router-dom";
 import HorizontalBar from 'Components/horizontalBar/horizontalbar';
 const SHIPPING_INFO = 'SHIPPING_INFO';
 const SHIPPING_METHOD = 'SHIPPING_METHOD';
 const PAYMENT_INFO = 'PAYMENT_INFO';
 
 const Checkout = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    const navigateTOordersummary=()=>{
-        navigate("/Ordersummary")
-    }
+    // const navigateTOordersummary=()=>{
+    //     navigate("/Ordersummary")
+    // }
 
    const [activeMode, toggleView] = useState({
         [SHIPPING_INFO]: true,
@@ -70,14 +70,14 @@ const Checkout = () => {
                         <Orderitem ></Orderitem> 
                         }
 
-                        <div className='text-center mb-24'>
+                        {/* <div className='text-center mb-24'>
                             <button className='btn shipmethod-btn'  width={280} onClick={(navigateTOordersummary)} >PLACE ORDER</button>
                         </div>
 
                         <div className='text-center mb-125'>
                             By Clicking confirm order you agree to our&nbsp;&nbsp;
                             <NavLink to={'/capstone'}>Terms and Conditions</NavLink>
-                        </div>
+                        </div> */}
                  </div>
 
                 <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--8 aem-GridColumn--phone--12'>
