@@ -1,5 +1,5 @@
-@import '../../variable.scss';
-@import '../../mixins.scss';
+// @import '../../variable.scss';
+@import '../../style/mixins.scss';
 
 .sidebar {
     display: grid;
@@ -92,46 +92,46 @@
 
             }
 
-            .black-color {
-                background: $color_black 0% 0% no-repeat padding-box;
-            }
+            // .black-color {
+            //     background: $color_black 0% 0% no-repeat padding-box;
+            // }
 
-            .white-color {
-                background: $color_white 0% 0% no-repeat padding-box;
-                border: 2px solid #DFE1E2;
-            }
+            // .white-color {
+            //     background: $color_white 0% 0% no-repeat padding-box;
+            //     border: 2px solid #DFE1E2;
+            // }
 
-            .teal-green {
-                background: $color_teal-green ;
-            }
+            // .teal-green {
+            //     background: $color_teal-green ;
+            // }
 
-            .mustard-color {
-                background: $color_mustard 0% 0% no-repeat padding-box;
-            }
+            // .mustard-color {
+            //     background: $color_mustard 0% 0% no-repeat padding-box;
+            // }
 
-            .blue-color {
-                background: $color_blue 0% 0% no-repeat padding-box;
-            }
+            // .blue-color {
+            //     background: $color_blue 0% 0% no-repeat padding-box;
+            // }
 
-            .red-color {
-                background: $color_red 0% 0% no-repeat padding-box;
-            }
+            // .red-color {
+            //     background: $color_red 0% 0% no-repeat padding-box;
+            // }
 
-            .lavender-color {
-                background: $color_lavender 0% 0% no-repeat padding-box;
-            }
+            // .lavender-color {
+            //     background: $color_lavender 0% 0% no-repeat padding-box;
+            // }
 
-            .pink-color {
-                background: $color_pink 0% 0% no-repeat padding-box;
-            }
+            // .pink-color {
+            //     background: $color_pink 0% 0% no-repeat padding-box;
+            // }
 
-            .dark-yellow {
-                background: $color_yellow 0% 0% no-repeat padding-box;
-            }
+            // .dark-yellow {
+            //     background: $color_yellow 0% 0% no-repeat padding-box;
+            // }
 
-            .multi-color {
-                background: transparent linear-gradient(180deg, #AF52FF 0%, #7950E8 16%, #4F5ADA 29%, #57CB76 43%, #EBC250 56%, #FF8810 69%, #E32F0F 83%, #BF1919 100%) 0% 0% no-repeat padding-box;
-            }
+            // .multi-color {
+            //     background: transparent linear-gradient(180deg, #AF52FF 0%, #7950E8 16%, #4F5ADA 29%, #57CB76 43%, #EBC250 56%, #FF8810 69%, #E32F0F 83%, #BF1919 100%) 0% 0% no-repeat padding-box;
+            // }
 
         }
 

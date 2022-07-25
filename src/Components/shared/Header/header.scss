@@ -1,4 +1,4 @@
-@import '../../../mixins.scss';
+@import '../../../style/mixins.scss';
 
 .nav-icons {
   padding-top: 18px;
@@ -113,7 +113,7 @@ header {
       height: var(--unnamed-pixel-20);
       justify-content: center;
       position: absolute !important;
-      right: 21%;
+      right: 22%;
       top: 8px;
       width: var(--unnamed-pixel-16);
     }

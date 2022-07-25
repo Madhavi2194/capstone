@@ -1,5 +1,5 @@
-@import '../../variable.scss';
-@import '../../mixins.scss';
+@import '../../style/variable.scss';
+@import '../../style/mixins.scss';
 
 .productdetails-wrapper {
     padding:33px 16px;
@@ -78,30 +78,30 @@
         border-radius: 10px;
     }
 
-    .black-color {
-        background: $color_black 0% 0% no-repeat padding-box;  }
+    // .black-color {
+    //     background: $color_black 0% 0% no-repeat padding-box;  }
 
-    .white-color {
-        background: $color_white 0% 0% no-repeat padding-box;
-        border: 2px solid #DFE1E2;
-    }
+    // .white-color {
+    //     background: $color_white 0% 0% no-repeat padding-box;
+    //     border: 2px solid #DFE1E2;
+    // }
 
-    .teal-green {
-        background: $color_teal-green ;
-    }
+    // .teal-green {
+    //     background: $color_teal-green ;
+    // }
 
-    .teal-blue{
-        background-color: $color_teal_blue  ;
-    }
-    .magento-color{
-        background-color: $color-magento  ;
-    }
-    .darkblack-color{
-        background-color: $color-darkblack  ;
-    }
-    .grey-color{
-        background-color: $color-grey ;
-    }
+    // .teal-blue{
+    //     background-color: $color_teal_blue  ;
+    // }
+    // .magento-color{
+    //     background-color: $color-magento  ;
+    // }
+    // .darkblack-color{
+    //     background-color: $color-darkblack  ;
+    // }
+    // .grey-color{
+    //     background-color: $color-grey ;
+    // }
 
 }
 .size-section {
