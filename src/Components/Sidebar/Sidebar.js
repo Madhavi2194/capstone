@@ -87,7 +87,7 @@ const Sidebar = (props) => {
                   value="Option1x"
                   onClick={() => filterHandler("jewelery")}
                 />
-                <label htmlFor="option1">Jewelery</label>
+                <label htmlFor="option1">Jewellery</label>
               </li>
               <li
                 style={{
@@ -163,7 +163,7 @@ const Sidebar = (props) => {
                 value="Option19"
                 onClick={() => filterHandler("jewelery")}
               />
-              <label htmlFor="option19">Jewelery</label>
+              <label htmlFor="option19">Jewellery</label>
             </li>
             <li
               style={{
