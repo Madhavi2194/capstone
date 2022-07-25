@@ -9,7 +9,6 @@ const Sidebar = (props) => {
   let ourpage =
     window.location.href.split("/")[window.location.href.split("/").length - 1];
 
-  console.log("check");
   const [show, setShow] = useState(false);
   const [filters, setFilters] = useState(new Set());
 

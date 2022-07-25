@@ -8,6 +8,8 @@ import Sidebar from "../Sidebar/Sidebar";
 import loader from "../../assests/loader.gif";
 import Pagination from "react-js-pagination";
 import { useSelector } from "react-redux";
+
+
 function ProductList() {
   const products = useSelector((state) => state.allProducts.products);
   const dispatch = useDispatch();
@@ -26,9 +28,11 @@ function ProductList() {
       .catch((err) => { });
     dispatch(setProducts(response.data));
   };
+  
   useEffect(() => {
     fetchProducts();
   }, []);
+
   const [filterState, updateFilter] = useState([]);
 
   let filterONitems = [];
@@ -36,6 +40,7 @@ function ProductList() {
     filterONitems = [...filteritems];
     updateFilter(filterONitems);
   }
+
   return (
     <div>
       <div className="container grid-wrapper">

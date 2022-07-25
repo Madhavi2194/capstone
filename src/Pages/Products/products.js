@@ -4,11 +4,13 @@ import React from 'react';
  import ProductList from '../../Components/ProductList/productlist';
 
 const products = () => {
+
+
     return (
         <div>
             <Banner></Banner>
             <Breadcrum></Breadcrum>
-            <ProductList></ProductList>
+            <ProductList ></ProductList>
         </div>
     );
 };

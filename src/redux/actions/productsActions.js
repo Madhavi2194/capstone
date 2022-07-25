@@ -35,5 +35,15 @@ export const addTOCart = (payload) => {
      type: ActionTypes.ADD_ITEM_CART,
      payload,
  };
+ 
 
 };
+
+export const productListLength = (payload) => {
+  return {
+     type: "PRODUCT_LIST_LENGTH",
+     payload,
+ };
+ 
+};
+

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../product/product.scss";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setWishlist } from "redux/actions/productsActions";
+import { setWishlist ,productListLength} from "redux/actions/productsActions";
+
+
+
 function Product(props) {
   const products = props.products;
   const dispatch = useDispatch();
@@ -35,17 +38,18 @@ function Product(props) {
       filteredproducts = products.filter(
         (item) => ourFilter[0] == item.category
       );
-      
     }
   } else {
     if (props.filterOnItems.length > 0) {
       filteredproducts = products.filter((item) =>
         props.filterOnItems.includes(item.category)
       );
-      
     }
   }
-  
+
+  useEffect(() =>{
+   dispatch(productListLength(filteredproducts.length))
+  },[filteredproducts])
   
   const HeartEvent = (e) => {
     const x = e.target.id;

@@ -76,4 +76,15 @@ export const cartReducer = (state = cartIntialState, { type, payload }) => {
 };
 
 
+export const productlistlengthReducer = (state = 0, { type, payload }) => {
+  switch (type) {
+    case "PRODUCT_LIST_LENGTH":
+      state = payload;
+      return state;
+      default:
+      return state;
+  }
+};
+
+
 
