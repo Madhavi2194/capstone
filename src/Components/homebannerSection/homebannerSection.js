@@ -5,31 +5,29 @@ import { NavLink } from "react-router-dom";
 
 
 
-const HomebannerSection = () =>{
-return(
-   
+const HomebannerSection = () => {
+    return (
+        <div className="container">
+            <div className="product-banner-wrapper">
+                <div className="product-banner-image">
+                    <img alt="banner-img" src={require("../../assests/hikings.jpg")} width="100%" height="100%" />
+                </div>
+                <div className="product-banner-conquer">
+                    <h2> Conquer Your Next Adventure</h2>
+                    <div className="subheading mb-32">Adventure is out there</div>
+                    <NavLink to={'/product/all'}>
+                        <button className="banner-button">SHOP DEVICES</button>
+                    </NavLink>
 
-    <div className="container">
-        <div className="product-banner-wrapper">
-          <div className="product-banner-image">
-               <img alt="banner-img" src={require("../../assests/hikings.jpg")} width="100%" height="100%" />
-            </div>
-           <div className="product-banner-conquer">
-            <h2> Conquer Your Next Adventure</h2>
-            <div className="subheading mb-32">Adventure is out there</div>
-            <NavLink to={'/product/all'}>
-                <button className="banner-button">SHOP DEVICES</button>
-           </NavLink>
+                </div>
+                <div className="product-banner-mappin">
+                    <img src={mappin} className="mb-8" alt="locationpin" />
+                    <div className="product-horizontal-bar"></div>
 
-           </div>
-            <div className="product-banner-mappin">
-            <img src={mappin} className="mb-8" alt ="locationpin"/>
-            <div className="product-horizontal-bar"></div>
-            
+                </div>
             </div>
         </div>
-    </div>
-)
+    )
 }
 
 export default HomebannerSection;

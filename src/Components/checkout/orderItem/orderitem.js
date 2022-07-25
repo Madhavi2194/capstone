@@ -1,14 +1,14 @@
 import React from 'react';
 import "./orderitem.scss";
 import { useSelector } from 'react-redux';
-import { useNavigate,NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 
 const Orderitem = (prop) => {
     const product = useSelector((state) => state.cart.cart);
     const navigate = useNavigate();
 
-    const navigateTOordersummary=()=>{
+    const navigateTOordersummary = () => {
         navigate("/Ordersummary")
     }
 
@@ -33,16 +33,16 @@ const Orderitem = (prop) => {
                         </div>
                     </div>
                 </div>)}
-                
+
             </div>
             <div className='text-center mb-24'>
-                            <button className='btn shipmethod-btn'  width={280} onClick={(navigateTOordersummary)} >PLACE ORDER</button>
-                        </div>
+                <button className='btn shipmethod-btn' width={280} onClick={(navigateTOordersummary)} >PLACE ORDER</button>
+            </div>
 
-                        <div className='text-center mb-125'>
-                            By Clicking confirm order you agree to our&nbsp;&nbsp;
-                            <NavLink to={'/capstone'}>Terms and Conditions</NavLink>
-                        </div>
+            <div className='text-center mb-125'>
+                By Clicking confirm order you agree to our&nbsp;&nbsp;
+                <NavLink to={'/capstone'}>Terms and Conditions</NavLink>
+            </div>
         </section>
     );
 };

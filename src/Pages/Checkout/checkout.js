@@ -5,8 +5,7 @@ const checkout = () => {
     return (
         <div>
            <Chekout></Chekout>
-         
-         </div>
+        </div>
     );
 };
 

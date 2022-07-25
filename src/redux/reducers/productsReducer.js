@@ -16,7 +16,6 @@ const wishlistInitialState ={
 
   
 
-
 export const productsReducer = (state = intialState, { type, payload }) => {
   switch (type) {
     case ActionTypes.SET_PRODUCTS:
@@ -66,7 +65,6 @@ const removeProduct =(state, payload) => {
 } 
 
 export const cartReducer = (state = cartIntialState, { type, payload }) => {
- 
   switch (type) {
     case ActionTypes.ADD_ITEM_CART:
       return addProducttoCart(state, payload);

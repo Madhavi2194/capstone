@@ -11,8 +11,6 @@ const shippingIntialState = {
         city:"",
         state:"",
         zip:"",
-
-
     }
   };
   

@@ -17,7 +17,7 @@ import { removeSelectedProduct } from "redux/actions/productsActions";
 function CartItem() {
 
     const addCart = useSelector((state) => state.cart.cart);
-    let [ selectedPro, setSelectedPro ] = useState(addCart);
+    let [selectedPro, setSelectedPro] = useState(addCart);
     //Quantity IncDec start
     const [num, setQuantity] = useState(1);
     const dispatch = useDispatch();
@@ -32,7 +32,7 @@ function CartItem() {
     }, [addCart])
 
     const handleDecrement = () => {
-        
+
         if (num > 1) {
             setQuantity(prevCount => prevCount - 1);
 
@@ -40,11 +40,11 @@ function CartItem() {
     }
 
     const handleIncrement = () => {
-       
+
         if (num < 10) {
             setQuantity(prevCount => prevCount + 1);
         }
-        
+
     }
     const removeitem = (item) => {
         dispatch(removeSelectedProduct(item));
@@ -149,39 +149,30 @@ function CartItem() {
                             <div className="horizontal-bar"></div>
                         </div>
                         <div className="cart-section-details aem-Grid aem-Grid--default--12 aem-Grid--phone--1">
-                            
-                                <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--1">
-                                    {selectedPro.length != 0 ?  selectedPro.map(ProductList) : "No Data Found"}
 
+                            <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--1">
+                                {selectedPro.length != 0 ? selectedPro.map(ProductList) : "No Data Found"}
 
-                                    <div className="aem-Grid aem-Grid--default--12 aem-Grid--phone--1" >
+                                <div className="aem-Grid aem-Grid--default--12 aem-Grid--phone--1" >
 
-                                        <div className="accordion">
-                                            {accordionData.map(({ title, content, subcontent }) => (
-                                                <Accordion title={title} content={content} subcontent={subcontent} />
-                                            ))}
-                                        </div>
+                                    <div className="accordion">
+                                        {accordionData.map(({ title, content, subcontent }) => (
+                                            <Accordion title={title} content={content} subcontent={subcontent} />
+                                        ))}
                                     </div>
-                                </div> 
-
-
+                                </div>
+                            </div>
                             <div className=" aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--1">
                                 <div className="pricing">
                                     <PricingSummary />
                                 </div>
                             </div>
                         </div>
-
-
                     </section>
-
                 </>
             </div>
         </section>
     );
-
-
-
 
 }
 export default CartItem;

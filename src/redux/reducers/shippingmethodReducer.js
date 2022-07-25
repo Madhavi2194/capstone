@@ -6,8 +6,6 @@ const shippingMethodIntialState = {
      }
   };
   
-  
-  
   export const shippingMethodReducer = (state = shippingMethodIntialState, { type, payload }) => {
     switch (type) {
       case "SET_SHIPPING_METHOD": 

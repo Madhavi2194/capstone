@@ -11,8 +11,8 @@ const Ordersummary = () => {
     const ProductshipData = useSelector((state) => state.shippingInfo.shippingInfo);
     const ProductshipMethoddata = useSelector((state) => state.shippingMethod.shippingMethod);
     const productpaymentData = useSelector((state) => state.paymentInfo.paymentInfo);
-    
-   
+
+
     return (
         <div className="container order">
             <div className='text-center'>
@@ -27,10 +27,10 @@ const Ordersummary = () => {
                     <div className="aem-Grid aem-Grid--default--12 aem-Grid--phone--1">
                         <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--1">
                             <h3><b>Shipping Information</b></h3>
-                            <p>{ProductshipData.email} <br/>
-                            {ProductshipData.phoneno}</p>
+                            <p>{ProductshipData.email} <br />
+                                {ProductshipData.phoneno}</p>
                             <p>
-                            {ProductshipData.streetadr} &nbsp; {ProductshipData.streetadr2} &nbsp;  {ProductshipData.city}<br/>  {ProductshipData.zip}
+                                {ProductshipData.streetadr} &nbsp; {ProductshipData.streetadr2} &nbsp;  {ProductshipData.city}<br />  {ProductshipData.zip}
                             </p>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--1">
@@ -51,7 +51,6 @@ const Ordersummary = () => {
                         <p>
                             You will also receive an email with the details and we will let you know when your order has shipped.
                         </p>
-
                         <p>
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. For assistance call Support at 1-800-867-5309, M - F, 9am - 8pm EST.
                         </p>

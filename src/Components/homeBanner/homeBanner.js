@@ -3,7 +3,6 @@ import React from "react";
 import "./homeBanner.scss";
 import { NavLink } from "react-router-dom";
 
-
 const HomeBanner = () => {
     return (
         <div className="container homeBanner-container">
@@ -28,17 +27,9 @@ const HomeBanner = () => {
                     </div>
 
                     <HorizontalBar />
-
-
                 </div>
-
-
-
             </div>
-
         </div>
-
-
     )
 }
 

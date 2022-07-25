@@ -14,7 +14,7 @@
         position: relative;
         display: flex;
         justify-content: center;
-       
+
 
         figure {
             margin: 0;
@@ -43,7 +43,7 @@
     }
 }
 
-@include desktop{
+@include desktop {
 
     .category-wrapper {
         display: flex;
@@ -54,25 +54,25 @@
         width: 84%;
         z-index: 997;
         top: -70px;
-    
+
         .category-item {
             padding: 0 var(--unnamed-pixel-24);
             position: relative;
             display: flex;
             justify-content: center;
             margin: 0 var(--unnamed-pixel-10);
-    
+
             figure {
                 margin: 0;
                 margin-top: var(--unnamed-pixel-12);
                 height: 200px;
                 overflow: hidden;
-    
+
                 img {
                     min-width: 180px;
                 }
             }
-    
+
             .category-label {
                 position: absolute;
                 bottom: 0;
@@ -81,17 +81,16 @@
                 padding: var(--unnamed-pixel-12) var(--unnamed-pixel-16);
                 border-bottom: var(--unnamed-pixel-4) solid var(--primary-m1);
                 width: calc(100% - 20px);
-    
+
                 span {
                     font-size: var(--unnamed-pixel-12);
                 }
             }
         }
     }
-    
+
     .category-item-wrapper {
         background-color: var(--white);
     }
 
 }
-

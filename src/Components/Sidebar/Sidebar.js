@@ -5,9 +5,7 @@ import "./Sidebar.scss";
 import { useState } from "react";
 
 const Sidebar = (props) => {
-  console.log("check");
   const [show, setShow] = useState(false);
-  // const products = useSelector((state) => state.allProducts.products);
   const [filters, setFilters] = useState(new Set());
 
   function filterHandler(optin) {
@@ -71,31 +69,22 @@ const Sidebar = (props) => {
             <ul>
               <li>
                 <input
-                  type="checkbox"
-                  id="option1"
-                  name="option1"
-                  value="Option1x"
+                  type="checkbox" id="option1" name="option1" value="Option1"
                   onClick={() => filterHandler("jewelery")}
                 />
                 <label htmlFor="option1">Jewelery</label>
               </li>
               <li>
                 <input
-                  type="checkbox"
-                  id="option2"
-                  name="option2"
-                  value="Option2"
-                  onClick={() => filterHandler("electronics")}
+                  type="checkbox" id="option2"
+                  name="option2" value="Option2" onClick={() => filterHandler("electronics")}
                 />
                 <label htmlFor="option2">Electronics</label>
               </li>
               <li>
                 <input
-                  type="checkbox"
-                  id="option3"
-                  name="option3"
-                  value="Option3"
-                  onClick={() => filterHandler("men's clothing")}
+                  type="checkbox" id="option3" name="option3"
+                  value="Option3" onClick={() => filterHandler("men's clothing")}
                 />
                 <label htmlFor="option3">Men's Clothing </label>
               </li>
@@ -121,40 +110,28 @@ const Sidebar = (props) => {
           <ul>
             <li>
               <input
-                type="checkbox"
-                id="option19"
-                name="option19"
-                value="Option19"
-                onClick={() => filterHandler("jewelery")}
+                type="checkbox" id="option19"
+                name="option19" value="Option19" onClick={() => filterHandler("jewelery")}
               />
               <label htmlFor="option19">Jewelery</label>
             </li>
             <li>
               <input
-                type="checkbox"
-                id="option20"
-                name="option20"
-                value="Option20"
-                onClick={() => filterHandler("electronics")}
+                type="checkbox" id="option20" name="option20"
+                value="Option20" onClick={() => filterHandler("electronics")}
               />
               <label htmlFor="option20">Electronics</label>
             </li>
             <li>
               <input
-                type="checkbox"
-                id="option21"
-                name="option21"
-                value="Option21"
-                onClick={() => filterHandler("men's clothing")}
+                type="checkbox" id="option21" name="option21"
+                value="Option21" onClick={() => filterHandler("men's clothing")}
               />
               <label htmlFor="option21">Men's Clothing</label>
             </li>
             <li>
               <input
-                type="checkbox"
-                id="option22"
-                name="option22"
-                value="option22"
+                type="checkbox" id="option22" name="option22" value="option22"
                 onClick={() => filterHandler("women's clothing")}
               />
               <label htmlFor="option22">Women's Clothing</label>

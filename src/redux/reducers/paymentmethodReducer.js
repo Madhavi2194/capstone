@@ -11,8 +11,6 @@ const paymentIntialState = {
      }
   };
   
-  
-  
   export const paymentInfoReducer = (state = paymentIntialState, { type, payload }) => {
     switch (type) {
       case "SET_PAYMENT_INFO": 

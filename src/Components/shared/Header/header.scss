@@ -1,53 +1,64 @@
 @import '../../../mixins.scss';
+
 .nav-icons {
   padding-top: 18px;
 }
-.header-wrapper{
+
+.header-wrapper {
   background-color: var(--primary-brand);
 }
+
 header {
-  .nav-icons >ul {
+  .nav-icons>ul {
     display: var(--unnamed-display-flex);
     padding: 0;
   }
+
   .nav-icons>ul>li {
     padding: 0 12px
   }
-  .navbar-toggle>ul{
-    padding:16px;
+
+  .navbar-toggle>ul {
+    padding: 16px;
     position: absolute;
     width: 100%;
     background: var(--white);
     top: -99px;
   }
-  .nav-item{
+
+  .nav-item {
     padding: 15px;
   }
- .cart-counter{
-  background: var(--unnamed-color-172026);
-  border-radius: 50%;
-  color: var(--white);
-  display: flex;
-  font-size: var(--unnamed-font-size-10);
-  height: var(--unnamed-pixel-20);
-  justify-content: center;
-  position: absolute!important;
-  right:6.5%;
-  top: 8px;
-  width: var(--unnamed-pixel-16);
- }
+
+  .cart-counter {
+    background: var(--unnamed-color-172026);
+    border-radius: 50%;
+    color: var(--white);
+    display: flex;
+    font-size: var(--unnamed-font-size-10);
+    height: var(--unnamed-pixel-20);
+    justify-content: center;
+    position: absolute !important;
+    right: 6.5%;
+    top: 8px;
+    width: var(--unnamed-pixel-16);
+  }
+
   .border-grey {
     border-bottom: 1px solid var(--gray-l1);
   }
+
   .header-wrapper {
     padding: 25px 10px;
   }
-  .close{
+
+  .close {
     display: flex;
     justify-content: space-between;
     padding: 10px;
     background: var(--gray-l1);
   }
+
   .navbar-toggle {
     position: absolute;
     width: 100%;
@@ -57,71 +68,82 @@ header {
     right: 1px;
     box-shadow: 0px 8px 16px #00000026;
   }
+
   .navbar {
     display: var(--unnamed-display-flex);
     justify-content: space-between;
   }
+
   .navbar-brand {
     padding: 17px 35px;
     text-align: center;
-   
+
   }
-   .cart-bag{
+
+  .cart-bag {
     width: 20px;
     height: 20px;
-   }
- 
+  }
+
 }
+
 .navbar-nav {
-  li{
-    a{
+  li {
+    a {
       color: var(--unnamed-color-172026);
       text-decoration: none;
     }
-    a.active{
+
+    a.active {
       text-decoration: underline;
     }
   }
 }
+
 @include desktop {
   .header-wrapper {
-      // padding-top: 15px;
-      background: var(--primary-brand) 0% 0% no-repeat padding-box;
-      .cart-counter{
-        background: var(--unnamed-color-172026);
-        border-radius: 50%;
-        color: var(--white);
-        display: flex;
-        font-size: var(--unnamed-font-size-10);
-        height: var(--unnamed-pixel-20);
-        justify-content: center;
-        position: absolute!important;
-        right:21%;
-        top: 8px;
-        width: var(--unnamed-pixel-16);
-       }
+    background: var(--primary-brand) 0% 0% no-repeat padding-box;
+
+    .cart-counter {
+      background: var(--unnamed-color-172026);
+      border-radius: 50%;
+      color: var(--white);
+      display: flex;
+      font-size: var(--unnamed-font-size-10);
+      height: var(--unnamed-pixel-20);
+      justify-content: center;
+      position: absolute !important;
+      right: 21%;
+      top: 8px;
+      width: var(--unnamed-pixel-16);
+    }
   }
- 
+
   .navbar-nav {
     display: var(--unnamed-display-flex);
     width: 65%;
     padding: 0;
     justify-content: center;
+
     .nav-item {
       padding: 15px;
     }
-    li{
+
+    li {
       color: var(--white);
-      a{
+
+      a {
         text-decoration: none;
         color: var(--white);
       }
     }
   }
+
   .nav-icons {
     display: var(--unnamed-display-flex);
     justify-content: space-evenly;
     width: 20%;
+
     .text_top {
       vertical-align: top;
     }

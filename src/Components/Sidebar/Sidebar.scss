@@ -14,14 +14,14 @@
         padding: 16px 0;
     }
 
-    .border-line > a{
+    .border-line>a {
         color: var(--gray-d2);
     }
 
     .filter-section {
         margin: 10px 0;
 
-        p{
+        p {
             padding: 12px 0;
             font-weight: bold;
         }
@@ -54,13 +54,13 @@
                 color: var(--gray-d2);
                 padding-bottom: 17px;
             }
-     
-            
+
+
         }
 
         .border-line {
             box-shadow: 0px 2px #f3efef;
-           
+
         }
 
     }
@@ -68,8 +68,9 @@
 
     .sidebar-colors-wrapper {
         div {
-            padding:12px 0;
+            padding: 12px 0;
         }
+
         p {
             font: var(--unnamed-font-style-normal) normal 600 var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
             letter-spacing: var(--unnamed-character-spacing-0);
@@ -88,11 +89,12 @@
                 width: 64px;
                 height: 40px;
                 border-radius: 6px;
-                
+
             }
 
             .black-color {
-                background: $color_black 0% 0% no-repeat padding-box;            }
+                background: $color_black 0% 0% no-repeat padding-box;
+            }
 
             .white-color {
                 background: $color_white 0% 0% no-repeat padding-box;

@@ -19,7 +19,7 @@ const Header = () => {
         return cartCount;
       }, 0)
   );
-  console.log("cartl", cartLen);
+
   return (
     <>
       <header className="container header-wrapper">

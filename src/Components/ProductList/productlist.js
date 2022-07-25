@@ -23,18 +23,17 @@ function ProductList() {
   const fetchProducts = async () => {
     const response = await axios
       .get("https://fakestoreapi.com/products")
-      .catch((err) => {});
+      .catch((err) => { });
     dispatch(setProducts(response.data));
   };
   useEffect(() => {
     fetchProducts();
   }, []);
   const [filterState, updateFilter] = useState([]);
-  console.log("b4 parent");
+
   let filterONitems = [];
   function filterOn(filteritems) {
     filterONitems = [...filteritems];
-    console.log("parent", filterONitems);
     updateFilter(filterONitems);
   }
   return (

@@ -5,20 +5,13 @@ import ShippingMethod from 'Components/checkout/shippingMethod/shippingMethod';
 import PaymentInfo from 'Components/checkout/paymentInfo/paymentInfo';
 import Orderitem from './orderItem/orderitem';
 import "./checkout.scss";
-// import { useNavigate,NavLink } from "react-router-dom";
 import HorizontalBar from 'Components/horizontalBar/horizontalbar';
 const SHIPPING_INFO = 'SHIPPING_INFO';
 const SHIPPING_METHOD = 'SHIPPING_METHOD';
 const PAYMENT_INFO = 'PAYMENT_INFO';
 
 const Checkout = () => {
-    // const navigate = useNavigate();
-
-    // const navigateTOordersummary=()=>{
-    //     navigate("/Ordersummary")
-    // }
-
-   const [activeMode, toggleView] = useState({
+    const [activeMode, toggleView] = useState({
         [SHIPPING_INFO]: true,
         [SHIPPING_METHOD]: false,
         [PAYMENT_INFO]: false
@@ -26,20 +19,20 @@ const Checkout = () => {
 
     const handleView = (view) => {
         const data = {
-         ...activeMode,
+            ...activeMode,
             [view]: true
         }
         toggleView(data);
-        
+
     }
     const MethodTab = ({ sNo, tabLabel }) => (
-        
+
         <section className=' mb-20'>
             <div className='checkout-tab inactive'>
-            
-            {`${sNo}. ${tabLabel}`}
-        </div>
-        <hr/>
+
+                {`${sNo}. ${tabLabel}`}
+            </div>
+            <hr />
         </section>
     )
 
@@ -53,50 +46,42 @@ const Checkout = () => {
             <div className="aem-Grid aem-Grid--12">
                 <div className='aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--8 aem-GridColumn--phone--12 padding-checkout'>
                     <ShippingInfo clickContinue={() => handleView(SHIPPING_METHOD)} ></ShippingInfo>
-                    
+
                     {activeMode[SHIPPING_METHOD] ? (
-                        <ShippingMethod clickContinue={() => handleView(PAYMENT_INFO)} ></ShippingMethod> ) :
+                        <ShippingMethod clickContinue={() => handleView(PAYMENT_INFO)} ></ShippingMethod>) :
                         (
                             <MethodTab sNo={2} tabLabel="Shipping Method" />
                         )}
 
-                    {activeMode[PAYMENT_INFO] ? ( 
-                        <PaymentInfo  clickEditMode={() => handleView(SHIPPING_METHOD)}></PaymentInfo>) :
+                    {activeMode[PAYMENT_INFO] ? (
+                        <PaymentInfo clickEditMode={() => handleView(SHIPPING_METHOD)}></PaymentInfo>) :
                         (
                             <MethodTab sNo={3} tabLabel="Payment Information" />
                         )}
 
-                     {activeMode[SHIPPING_METHOD] && activeMode[SHIPPING_INFO] && activeMode[PAYMENT_INFO]  && 
-                        <Orderitem ></Orderitem> 
-                        }
+                    {activeMode[SHIPPING_METHOD] && activeMode[SHIPPING_INFO] && activeMode[PAYMENT_INFO] &&
+                        <Orderitem ></Orderitem>
+                    }
 
-                        {/* <div className='text-center mb-24'>
-                            <button className='btn shipmethod-btn'  width={280} onClick={(navigateTOordersummary)} >PLACE ORDER</button>
-                        </div>
-
-                        <div className='text-center mb-125'>
-                            By Clicking confirm order you agree to our&nbsp;&nbsp;
-                            <NavLink to={'/capstone'}>Terms and Conditions</NavLink>
-                        </div> */}
-                 </div>
+                </div>
 
                 <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--8 aem-GridColumn--phone--12'>
-                {!activeMode[SHIPPING_METHOD] && !activeMode[PAYMENT_INFO] && <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--5 aem-GridColumn--phone--hide ">
-                    <section className='sign-in-section'>
-                        <div className='aem-Grid aem-Grid--12'>
-                            <div className='aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--8 aem-GridColumn--phone--6'>
-                                Sign in for Express Checkout
+                    {!activeMode[SHIPPING_METHOD] && !activeMode[PAYMENT_INFO] && <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--5 aem-GridColumn--phone--hide ">
+                        <section className='sign-in-section'>
+                            <div className='aem-Grid aem-Grid--12'>
+                                <div className='aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--8 aem-GridColumn--phone--6'>
+                                    Sign in for Express Checkout
+                                </div>
+                                <div className='aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--tablet--4 aem-GridColumn--phone--6'>
+                                    <button type="secondary" className='signin-btn'>SIGN IN</button>
+                                </div>
                             </div>
-                            <div className='aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--tablet--4 aem-GridColumn--phone--6'>
-                                <button type="secondary" className='signin-btn'>SIGN IN</button>
-                            </div>
-                        </div>
-                    </section>
-                </div> }
-                <div className='mb-16'>
-                   <PricingSummary></PricingSummary>
-                </div>
-                   
+                        </section>
+                    </div>}
+                    <div className='mb-16'>
+                        <PricingSummary></PricingSummary>
+                    </div>
+
                 </div>
             </div>
         </section>

@@ -6,18 +6,20 @@
     padding: var(--unnamed-pixel-16);
     margin-bottom: 16px;
 }
-.signin-btn{
+
+.signin-btn {
     background: var(--white) 0% 0% no-repeat padding-box;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 2px solid #D4703D;
     opacity: 1;
     color: #D4703D;
-    padding: 11px ;
-    width:100%;
+    padding: 11px;
+    width: 100%;
 }
 
 
-.border-bottom, .checkout-tab.inactive {
+.border-bottom,
+.checkout-tab.inactive {
     border-bottom: var(--unnamed-border-solid);
 }
 
@@ -26,18 +28,21 @@
     font-size: var(--unnamed-pixel-20);
     font-weight: 600;
 }
+
 .checkout-tab {
     padding: var(--unnamed-pixel-20) 0;
 }
+
 .margin-heading-checkout {
     margin: 27px 0 16px;
 }
+
 .padding-checkout {
-    padding: 0 ;
+    padding: 0;
 }
 
 
-@include desktop{
+@include desktop {
     .padding-checkout {
         padding: 0 30px 0 0;
     }

@@ -1,15 +1,15 @@
 import React from "react";
 import "../product/product.scss";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setWishlist } from "redux/actions/productsActions";
 function Product(props) {
   const products = props.products;
   const dispatch = useDispatch();
-  let ourFilter = [], //props.filterOnItems,
+  let ourFilter = [], 
     ourpage =
       window.location.href.split("/")[
-        window.location.href.split("/").length - 1
+      window.location.href.split("/").length - 1
       ];
   if (ourpage == "men") {
     ourFilter.push("men's clothing");
@@ -35,17 +35,17 @@ function Product(props) {
       filteredproducts = products.filter(
         (item) => ourFilter[0] == item.category
       );
-      console.log("final filter", ourFilter, props);
+      // console.log("final filter", ourFilter, props);
     }
   } else {
     if (props.filterOnItems.length > 0) {
       filteredproducts = products.filter((item) =>
         props.filterOnItems.includes(item.category)
       );
-      console.log("final filter", props.filterOnItems, props);
+      // console.log("final filter", props.filterOnItems, props);
     }
   }
-  console.log("products shown =", products);
+  // console.log("products shown =", products);
   const HeartEvent = (e) => {
     const x = e.target.id;
     if (e.target.className == "product__heart--icon") {

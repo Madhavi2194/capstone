@@ -9,10 +9,6 @@ import { useEffect } from 'react';
 import Gallery from '../Gallery/Gallery';
 import loader from '../../assests/loader.gif';
 
-
-
-
-
 function ProductDetails() {
     const navigate = useNavigate();
     const { productID } = useParams();
@@ -20,13 +16,11 @@ function ProductDetails() {
     const { image, title, price, description } = product;
     const dispatch = useDispatch();
 
-   
-
     const fetchProductDetail = async (id) => {
         const response = await axios
             .get(`https://fakestoreapi.com/products/${id}`)
             .catch((err) => {
-               
+
             });
         dispatch(selectedProduct(response.data));
     };
@@ -37,18 +31,14 @@ function ProductDetails() {
         navigate("/cart")
     }
 
-    
-
     useEffect(() => {
         if (productID) {
 
             fetchProductDetail(productID);
         }
-
-
     }, [productID]);
 
-   
+
 
     /* Increment decrement */
     let [num, setNum] = useState(1);
@@ -88,7 +78,7 @@ function ProductDetails() {
                             <div className='regular-heading-l-20- pt-16'><b>{title}</b></div>
                             <p className='display-s-20- mb-16'>$ {price}</p>
 
-                            
+
                             <p className='regular-heading-m-16- mb-16 border-line pt-18 '>{product.description}</p>
                             <p className='product-title-detail mb-16'>Color</p>
 
@@ -173,7 +163,7 @@ function ProductDetails() {
                     </div>
                 </div> : <center><span><img src={loader} className="loader-img" alt="loader" /></span></center>
             }
-            
+
         </>
     );
 

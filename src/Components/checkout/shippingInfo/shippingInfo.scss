@@ -1,28 +1,136 @@
 @import '../../../mixins.scss';
 
-section{
-    
+section {
+
+    h2 {
+        font: var(--unnamed-font-weight-600);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-172026);
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .shopping-btn-mb {
+        background: var(--white) 0% 0% no-repeat padding-box;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #D4703D;
+        opacity: 1;
+        color: #D4703D;
+        padding: 11px 55px;
+    }
+
+    .text-btn-center {
+        text-align: var(--unnamed-text-align-center);
+        text-align: -webkit-center;
+        margin: 20px;
+    }
+
+    .checkout-input-box {
+        background: var(--white) 0% 0% no-repeat padding-box;
+        border: 2px solid var(--gray-l2);
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #B5B7BC;
+        border-radius: 8px;
+        opacity: 1;
+        width: 100%;
+        height: 44px;
+        margin-bottom: 8px;
+        padding: 8px 16px;
+    }
+
+    .checkout-selectbox {
+        background: var(--white) 0% 0% no-repeat padding-box;
+        border: 2px solid var(--gray-l2);
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #B5B7BC;
+        border-radius: 8px;
+        opacity: 1;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 8px;
+        padding: 8px 16px;
+    }
+
+    .erroe-msg {
+        color: red;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    .shipping-method-heading,
+    .payment-method-heading {
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-25) var(--unnamed-font-family-muli);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        text-align: left;
+        font: normal normal 600 20px/25px Muli;
+        letter-spacing: 0px;
+        color: #72777F;
+        opacity: 1;
+        padding: 24px 0;
+    }
+
+    .form-group {
+        margin-right: 20px;
+
+        .checkout-lable {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+    }
+
+    .w-50 {
+        width: 100% !important;
+    }
+
+    .Shippinginfo-Readonly {
+        .shippingreadonly-Heading {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+    }
+
+    .shippinginfor-border {
+        border: 1px solid #D1D3D6;
+        border-radius: 2px;
+        padding: 15px;
+    }
+}
+
+@include desktop {
+    section {
+
         h2 {
             font: var(--unnamed-font-weight-600);
             letter-spacing: var(--unnamed-character-spacing-0);
             color: var(--unnamed-color-172026);
-            text-align: center;
+            text-align: left;
             margin-bottom: 24px;
         }
-        .shopping-btn-mb {
-            background: var(--white) 0% 0% no-repeat padding-box;
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            border: 2px solid #D4703D;
-            opacity: 1;
-            color: #D4703D;
-            padding: 11px 55px;
+
+        .w-50 {
+            width: 100%;
         }
-        .text-btn-center{
-            text-align: var( --unnamed-text-align-center);
-            text-align: -webkit-center;
-            margin:20px;
+
+        .Shippinginfo-Readonly {
+            .shippingreadonly-Heading {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            h2 {
+                margin-bottom: 10px;
+            }
+
         }
-        .checkout-input-box{
+
+        .checkout-input-box {
             background: var(--white) 0% 0% no-repeat padding-box;
             border: 2px solid var(--gray-l2);
             background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -32,8 +140,9 @@ section{
             width: 100%;
             height: 44px;
             margin-bottom: 8px;
-            padding:8px 16px;
+            padding: 8px 16px;
         }
+
         .checkout-selectbox {
             background: var(--white) 0% 0% no-repeat padding-box;
             border: 2px solid var(--gray-l2);
@@ -44,119 +153,28 @@ section{
             width: 100%;
             height: 40px;
             margin-bottom: 8px;
-            padding:8px 16px;
+            padding: 8px 16px;
         }
-        .erroe-msg{
-            color:red;
-            margin-bottom:5px;
-            font-size: 12px;
-        }
-        .shipping-method-heading ,
-        .payment-method-heading {
-            font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-25) var(--unnamed-font-family-muli);
-            letter-spacing: var(--unnamed-character-spacing-0);
-            text-align: left;
-            font: normal normal 600 20px/25px Muli;
-            letter-spacing: 0px;
-            color: #72777F;
-            opacity: 1;
-            padding: 24px 0;
-        }
-        
-        .form-group {
-            margin-right:20px;
 
-        .checkout-lable{
+        .checkout-lable {
             display: block;
             font-weight: 600;
             margin-bottom: 4px;
         }
-       
-        }
-        .w-50{
-            width:100% !important ;
+
+        .erroe-msg {
+            color: red;
+            margin-bottom: 5px;
         }
 
-        .Shippinginfo-Readonly{
-            .shippingreadonly-Heading{
-                display: flex;
-                justify-content: space-between;
-            }
-            h2{
-                margin-bottom: 10px;
-            }
-            
-        }
-        .shippinginfor-border{
-            border: 1px solid #D1D3D6;
-            border-radius: 2px;
-            padding: 15px;
-        }
-}
-
-@include desktop {
-    section{
-    
-        h2 {
-            font: var(--unnamed-font-weight-600);
-            letter-spacing: var(--unnamed-character-spacing-0);
-            color: var(--unnamed-color-172026);
-            text-align: left;
-            margin-bottom: 24px;
-        }
-        .w-50{
-            width:100% ;
-        }
-        .Shippinginfo-Readonly{
-            .shippingreadonly-Heading{
-                display: flex;
-                justify-content: space-between;
-            }
-            h2{
-                margin-bottom: 10px;
-            }
-            
-        }
-        .checkout-input-box{
-            background: var(--white) 0% 0% no-repeat padding-box;
-            border: 2px solid var(--gray-l2);
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            border: 2px solid #B5B7BC;
-            border-radius: 8px;
-            opacity: 1;
-            width: 100%;
-            height: 44px;
-            margin-bottom: 8px;
-            padding:8px 16px;
-        }
-        .checkout-selectbox{
-            background: var(--white) 0% 0% no-repeat padding-box;
-            border: 2px solid var(--gray-l2);
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            border: 2px solid #B5B7BC;
-            border-radius: 8px;
-            opacity: 1;
-            width: 100%;
-            height: 40px;
-            margin-bottom: 8px;
-            padding:8px 16px;
-        }
-        .checkout-lable{
-            display: block;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-        .erroe-msg{
-            color:red;
-            margin-bottom:5px;
-        }
         .form-group {
-            margin-right:20px;
+            margin-right: 20px;
         }
-        .w-50{
-            width:50% !important;
+
+        .w-50 {
+            width: 50% !important;
         }
-        
+
         .shopping-btn {
             background: var(--white) 0% 0% no-repeat padding-box;
             background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -165,7 +183,7 @@ section{
             color: #D4703D;
             padding: 11px 55px;
         }
-    
-    
+
+
     }
 }

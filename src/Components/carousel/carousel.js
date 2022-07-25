@@ -34,10 +34,10 @@ const HomeCarousel = () => {
                 <div className="">Signature Collection</div>
               </div>
               <p className="mb-32">
-                    Refresh your daily rotation with our women’s clothing range.Set the table for a relaxed meal with stylish details in black and white.</p>
+                Refresh your daily rotation with our women’s clothing range.Set the table for a relaxed meal with stylish details in black and white.</p>
               <NavLink to={'/product/all'}>
                 <button className="carousel-button">SHOP NOW</button>
-                </NavLink>
+              </NavLink>
             </div>
           </div>
           <div className="carousel_image2">
@@ -48,8 +48,8 @@ const HomeCarousel = () => {
                 <div className="">Signature Collection</div>
               </div>
               <p className="mb-32">Finish off your favourite new looks with an array of trendy accessories, and don’t forget to scroll for statement footwear in our women's shoes range</p>
-               <NavLink to={'/product/all'}>
-                 <button className="carousel-button">SHOP NOW</button>
+              <NavLink to={'/product/all'}>
+                <button className="carousel-button">SHOP NOW</button>
               </NavLink>
             </div>
           </div>
