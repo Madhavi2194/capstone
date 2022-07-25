@@ -7,14 +7,14 @@ const Category = () => {
       id: "shop_women",
       source: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
       title: "Shop Women",
-      description: "Lorem ipsum dolor sit amet",
+      description: "Round up the besties - it's time to dress up.",
       route_path: "women",
     },
     {
       id: "shop_men",
       source: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
       title: "Shop Men",
-      description: "Lorem ipsum dolor sit amet",
+      description: "Discover our wide range of super-soft T-shirts",
       route_path: "men",
     },
     {
@@ -22,7 +22,7 @@ const Category = () => {
       source:
         "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
       title: "Jewellery",
-      description: "Lorem ipsum dolor sit amet",
+      description: "Add a little edge with new styles and colours.",
       route_path: "jewellery",
     },
     {

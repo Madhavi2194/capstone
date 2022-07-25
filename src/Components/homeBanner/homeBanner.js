@@ -16,8 +16,8 @@ const HomeBanner = () => {
                         <div><b>Take off in the new</b></div>
                         <div><b>Signature Legging</b></div>
                     </div>
-                    <div className="regular-heading-20 mb-16">Lorem Ipsum Dolor Tempor</div>
-                    <div className="regualr-heading-16 mb-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna.</div>
+                    <div className="regular-heading-20 mb-16">Get the main strategu ready</div>
+                    <div className="regualr-heading-16 mb-24">An exclusive collection that will turn your style Upside Down.</div>
                     <div className="button-wrapper">
                         <NavLink to={'/product/all'}>
                             <button className="btn button-shop">SHOP COLLECTION</button>

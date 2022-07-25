@@ -39,7 +39,7 @@ class Footer extends React.Component {
                         </div>
                         <div className="footer-division">
                             <h4>Follow Us !</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                                <p>Become a member today and get 10% of your first purchase.</p>
                                     <div className="social_icon">
                                     <div className="icon"><img src={instagram}  className="insta"  alt="instagram-icon" /></div>
                                     <div className="icon"><img src={facebook} className="fcb"  alt="facebook-icon"/></div>
@@ -57,7 +57,7 @@ class Footer extends React.Component {
                        <div className ="footer-logo"> 
                         <img src={require("../../../assests/logo.png")} alt="Logo-img" href="/venia" className="logo-img" />
                         </div>
-                        <p className="copyright">© Company Name Address Ave, City Name, State ZIP</p>
+                        <p className="copyright">©VENIA, PUNE, MAHARASHTRA -411052</p>
                          <div className="term-policy">
                             <p className="terms"><a href="#">Terms of Use</a></p>
                             <p className="terms"><a href="#">Privacy Policy</a></p>
