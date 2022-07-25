@@ -1,10 +1,15 @@
 
 
+
 import React from "react";
 import "./Sidebar.scss";
 import { useState } from "react";
 
 const Sidebar = (props) => {
+  let ourpage =
+    window.location.href.split("/")[window.location.href.split("/").length - 1];
+
+  console.log("check");
   const [show, setShow] = useState(false);
   const [filters, setFilters] = useState(new Set());
 
@@ -67,28 +72,63 @@ const Sidebar = (props) => {
           <div className="filter-section">
             <p>Size</p>
             <ul>
-              <li>
+              <li
+                style={{
+                  display:
+                    ourpage == "all" || ourpage == "jewellery"
+                      ? "list-item"
+                      : "none",
+                }}
+              >
                 <input
-                  type="checkbox" id="option1" name="option1" value="Option1"
+                  type="checkbox"
+                  id="option1"
+                  name="option1"
+                  value="Option1x"
                   onClick={() => filterHandler("jewelery")}
                 />
                 <label htmlFor="option1">Jewelery</label>
               </li>
-              <li>
+              <li
+                style={{
+                  display:
+                    ourpage == "all" || ourpage == "electronic"
+                      ? "list-item"
+                      : "none",
+                }}
+              >
                 <input
-                  type="checkbox" id="option2"
-                  name="option2" value="Option2" onClick={() => filterHandler("electronics")}
+                  type="checkbox"
+                  id="option2"
+                  name="option2"
+                  value="Option2"
+                  onClick={() => filterHandler("electronics")}
                 />
                 <label htmlFor="option2">Electronics</label>
               </li>
-              <li>
+              <li
+                style={{
+                  display:
+                    ourpage == "all" || ourpage == "men" ? "list-item" : "none",
+                }}
+              >
                 <input
-                  type="checkbox" id="option3" name="option3"
-                  value="Option3" onClick={() => filterHandler("men's clothing")}
+                  type="checkbox"
+                  id="option3"
+                  name="option3"
+                  value="Option3"
+                  onClick={() => filterHandler("men's clothing")}
                 />
                 <label htmlFor="option3">Men's Clothing </label>
               </li>
-              <li>
+              <li
+                style={{
+                  display:
+                    ourpage == "all" || ourpage == "women"
+                      ? "list-item"
+                      : "none",
+                }}
+              >
                 <input
                   type="checkbox"
                   id="option4"
@@ -108,30 +148,66 @@ const Sidebar = (props) => {
         <div className="filter-section">
           <p>Category</p>
           <ul>
-            <li>
+            <li
+              style={{
+                display:
+                  ourpage == "all" || ourpage == "jewellery"
+                    ? "list-item"
+                    : "none",
+              }}
+            >
               <input
-                type="checkbox" id="option19"
-                name="option19" value="Option19" onClick={() => filterHandler("jewelery")}
+                type="checkbox"
+                id="option19"
+                name="option19"
+                value="Option19"
+                onClick={() => filterHandler("jewelery")}
               />
               <label htmlFor="option19">Jewelery</label>
             </li>
-            <li>
+            <li
+              style={{
+                display:
+                  ourpage == "all" || ourpage == "electronic"
+                    ? "list-item"
+                    : "none",
+              }}
+            >
               <input
-                type="checkbox" id="option20" name="option20"
-                value="Option20" onClick={() => filterHandler("electronics")}
+                type="checkbox"
+                id="option20"
+                name="option20"
+                value="Option20"
+                onClick={() => filterHandler("electronics")}
               />
               <label htmlFor="option20">Electronics</label>
             </li>
-            <li>
+            <li
+              style={{
+                display:
+                  ourpage == "all" || ourpage == "men" ? "list-item" : "none",
+              }}
+            >
               <input
-                type="checkbox" id="option21" name="option21"
-                value="Option21" onClick={() => filterHandler("men's clothing")}
+                type="checkbox"
+                id="option21"
+                name="option21"
+                value="Option21"
+                onClick={() => filterHandler("men's clothing")}
               />
               <label htmlFor="option21">Men's Clothing</label>
             </li>
-            <li>
+            <li
+              style={{
+                display:
+                  ourpage == "all" || ourpage == "women" ? "list-item" : "none",
+              }}
+            >
               <input
-                type="checkbox" id="option22" name="option22" value="option22"
+                type="checkbox"
+                id="option22"
+                name="option22"
+                value="option22"
                 onClick={() => filterHandler("women's clothing")}
               />
               <label htmlFor="option22">Women's Clothing</label>
@@ -144,5 +220,6 @@ const Sidebar = (props) => {
 };
 
 export default Sidebar;
+
 
 

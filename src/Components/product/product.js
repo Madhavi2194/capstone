@@ -35,17 +35,18 @@ function Product(props) {
       filteredproducts = products.filter(
         (item) => ourFilter[0] == item.category
       );
-      // console.log("final filter", ourFilter, props);
+      
     }
   } else {
     if (props.filterOnItems.length > 0) {
       filteredproducts = products.filter((item) =>
         props.filterOnItems.includes(item.category)
       );
-      // console.log("final filter", props.filterOnItems, props);
+      
     }
   }
-  // console.log("products shown =", products);
+  
+  
   const HeartEvent = (e) => {
     const x = e.target.id;
     if (e.target.className == "product__heart--icon") {
