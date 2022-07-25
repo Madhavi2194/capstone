@@ -53,7 +53,7 @@ function PricingSummary() {
                         <p>Subtotal</p>
                     </div>
                     <div className="Subtotal-amt">
-                        <p>$ {subTotal}</p>
+                        <p>$ {subTotal.toFixed(2)}</p>
                     </div>
                 </div>
                 <div className="pricing-content">

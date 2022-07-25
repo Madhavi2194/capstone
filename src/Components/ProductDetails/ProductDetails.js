@@ -80,24 +80,9 @@ function ProductDetails() {
 
                             
                             <p className='regular-heading-m-16- mb-16 border-line pt-18 '>{product.description}</p>
-                            <p className='product-title-detail mb-16'>Color</p>
+                            
+                           
 
-                            <div className="sidebar-colors-section  mb-24">
-                                <div className="teal-blue"><img src={require("../../assests/Swatch 01.png")} alt="color-teal-box" /></div>
-                                <div className="magento-color"><img src={require("../../assests/Swatch 02.png")} alt="color-magento-box" /></div>
-                                <div className="darkblack-color"><img src={require("../../assests/Swatch 03.png")} alt="color-black-box" /></div>
-                                <div className="grey-color"><img src={require("../../assests/Swatch 04.png")} alt="color-grey-box" /></div>
-                            </div>
-
-                            <p className='product-title-detail mb-16'>Size</p>
-                            <div className="size-section  mb-24">
-                                <div className="size"> X </div>
-                                <div className="size"> S </div>
-                                <div className="size"> M </div>
-                                <div className="size"> L </div>
-                                <div className="size"> XL </div>
-
-                            </div>
                             <section>
                                 <p className='product-title-detail mb-20'>Quantity</p>
                                 <div className="quantity-wrapper">
