@@ -9,23 +9,24 @@ import { setpaymentInfo } from 'redux/actions/paymentMethod';
 
 const PaymentInfo = (props) => {
     const [isEditview, toggleEditMode] = useState(true);
-
     const paymentInfo_Store = useSelector((state) => state.paymentInfo.paymentInfo);
     const [FinalData, Set_FinalData] = useState(paymentInfo_Store);
     const [PaymentInfo_state, Set_PaymentInfo_state] = useState(paymentInfo_Store);
-    const [formErrors, setFormErrors] = useState();
+  
     let dispatch = useDispatch();
 
-    const { handleSubmit } = useForm({ shouldUnregister: false });
+    const {
+        register,
+        handleSubmit,
+        formState: { errors }
+    } = useForm({ mode: "all", defaultValues: PaymentInfo_state });
 
-    const onSubmit = (data) => {
-
-        if (isFormfill()) {
+     const onSubmit = (data) => {
             toggleEditMode(false);
+            Set_PaymentInfo_state((p)=>{
+                return {...data}
+            })
             dispatch(setpaymentInfo(PaymentInfo_state))
-            setFormErrors(validate(PaymentInfo_state));
-            console.log("a", data);
-        }
     }
 
 
@@ -33,60 +34,7 @@ const PaymentInfo = (props) => {
         toggleEditMode(true);
     }
 
-    const isFormfill = () => {
-
-        let flag = true;
-        for (let key in FinalData) {
-            if (key !== "creditpayment" && !FinalData[key]) {
-                flag = false;
-                break;
-            }
-        }
-        return flag;
-
-    }
-
-    const validate = (ev) => {
-        let StringRegExp = /^[A-Za-z ]+$/;
-        let cardnoRegExp = /^\d{16}$/;
-        let cvvRegExp = /^\d{3}$/;
-        let { value, name } = ev.target;
-        Set_PaymentInfo_state(
-            (pre) => {
-                return {
-                    ...pre,
-                    [name]: value,
-                }
-
-            }
-        )
-
-        if ((name === "cardno" && cardnoRegExp.test(value)) ||
-            (name === "cvv" && cvvRegExp.test(value)) ||
-            ((name === "nameoncard") && StringRegExp.test(value))) {
-            setFormdata(ev);
-        }
-        else {
-            ev.target.value = "";
-            setFormdata(ev)
-        }
-        setFormdata(ev)
-    }
-
-    const setFormdata = (ev) => {
-
-        let { value, name } = ev.target;
-        Set_FinalData(
-            (pre) => {
-                return {
-                    ...pre,
-                    [name]: value,
-                }
-            }
-        )
-
-
-    }
+    
 
     return (
         <div className='mb-24'>
@@ -101,15 +49,22 @@ const PaymentInfo = (props) => {
                         <div className='aem-Grid aem-Grid--12'>
                             <div className="payment-selection">
                                 <input type="radio" id="credit-payment" name="creditpayment"
-                                    value="credit-payment" className='payment-input-btn ' checked />
+                                    value="credit-payment" className='payment-input-btn ' checked  />
                                 <label htmlFor="credit-payment" className="payment-info-Labels">Credit</label><br></br>
                             </div>
 
                             <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6 aem-GridColumn--phone--12'>
                                 <div className="form-group">
                                     <label className="checkout-lable"> Name on Card </label>
-                                    <input className="checkout-input-box" type="text" id="nameoncard" placeholder="Enter Cardholder Name" name="nameoncard" value={PaymentInfo_state.nameoncard} onChange={validate} />
-                                    <div className='erroe-msg'>{FinalData.nameoncard ? "" : "Enter Cardholder Name"}</div>
+                                    <input className="checkout-input-box" type="text" id="nameoncard" placeholder="Enter Cardholder Name" name="nameoncard" 
+                                      {...register('nameoncard', {
+                                        required: 'Card Number is Required',
+                                        pattern: {
+                                            value: /^[A-Za-z ]+$/,
+                                            message: 'Please Enter Card Name',
+                                        },
+                                    })}/>
+                                     <p className='error-msg'>{errors?.nameoncard?.message}</p>
                                 </div>
                             </div>
 
@@ -119,23 +74,36 @@ const PaymentInfo = (props) => {
                                         Credit Card Number
                                     </label>
                                     <input className="checkout-input-box" type="text" id="cardno" name="cardno" placeholder="XXXX XXXX XXXX 1234"
-                                        value={PaymentInfo_state.cardno} onChange={validate} />
-                                    <div className='erroe-msg'>{FinalData.cardno ? "" : "Enter Card Number"}</div>
+                                      {...register('cardno', {
+                                        required: 'Credit Card No is Required',
+                                        pattern: {
+                                            value: /^\d{16}$/,
+                                            message: 'Please Enter Credit Card No',
+                                        },
+                                    })} />
+                                     <p className='error-msg'>{errors?.cardno?.message}</p>
                                 </div>
                             </div>
 
                             <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--4 aem-GridColumn--phone--12'>
                                 <div className="form-group">
                                     <label className="checkout-lable" htmlFor=""> Expiration Date</label>
-                                    <input className="checkout-input-box" type="date" id="expDate" name="expDate" value={FinalData.expDate} onChange={setFormdata} />
+                                    <input className="checkout-input-box" type="date" id="expDate" name="expDate" {...register('expdate')}/>
                                 </div>
                             </div>
 
                             <div className='aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--tablet--2 aem-GridColumn--phone--12'>
                                 <div className="form-group">
                                     <label className="checkout-lable" htmlFor=""> CVV</label>
-                                    <input className="checkout-input-box" type="text" id="lname" placeholder="Enter CVV" name="cvv" value={PaymentInfo_state.cvv} onChange={validate} />
-                                    <div className='erroe-msg'>{FinalData.cvv ? "" : "Enter CVV Number"}</div>
+                                    <input className="checkout-input-box" type="text" id="lname" placeholder="Enter CVV" name="cvv"
+                                     {...register('cvv', {
+                                        required: 'CVV No Required',
+                                        pattern: {
+                                            value: /^\d{3}$/,
+                                            message: 'Please Enter CVV No',
+                                        },
+                                    })} />
+                                   <p className='error-msg'>{errors?.cvv?.message}</p>
                                 </div>
                             </div>
 
@@ -160,8 +128,8 @@ const PaymentInfo = (props) => {
                         </div>
                         <hr />
                         <div className='text-btn-center'>
-                            <button className="btn shipmethod-btn display-block-sm" disabled={!isFormfill()}>Continue</button>
-                            <button className="btn shipmethod-btn display-block-lg" disabled={!isFormfill()}>Continue To Review Order</button>
+                            <button className="btn shipmethod-btn display-block-sm" >Continue</button>
+                            <button className="btn shipmethod-btn display-block-lg" >Continue To Review Order</button>
                         </div>
                     </form>
                 </div>

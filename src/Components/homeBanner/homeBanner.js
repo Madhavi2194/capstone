@@ -5,8 +5,8 @@ import { NavLink } from "react-router-dom";
 
 const HomeBanner = () => {
     return (
-        <div className="container homeBanner-container">
-            <div className="aem-Grid aem-Grid--12 position-relative">
+        <div className=" homeBanner-container">
+            <div className="aem-Grid aem-Grid--12 position-relative container">
                 <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 image-sec-right">
                     <div className="banner-image-sec"></div>
                 </div>

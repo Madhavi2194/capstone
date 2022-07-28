@@ -1,16 +1,7 @@
 
 const shippingIntialState = {
     shippingInfo: {
-        email:"",
-        phoneno:"",
-        country:"",
-        fname: "",
-        lname:"",
-        streetadr:"",
-        streetadr2:"",
-        city:"",
-        state:"",
-        zip:"",
+        
     }
   };
   

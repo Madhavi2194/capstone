@@ -5,7 +5,6 @@ class Banner extends Component {
     render() {
         return (
             <div className="banner-container ">
-
                 <div className="banner-wrapper  ">
                     <div className="banner-image mb-32"> </div>
                     <div className="banner-sider-content">
@@ -14,8 +13,6 @@ class Banner extends Component {
                             <div className="">Outwear</div>
                         </h2>
                     </div>
-
-
                 </div>
             </div>
         )

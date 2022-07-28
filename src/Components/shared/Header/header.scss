@@ -100,6 +100,25 @@ header {
   }
 }
 
+@include tablet {
+  header{
+    .cart-counter {
+      background: var(--unnamed-color-172026);
+      border-radius: 50%;
+      color: var(--white);
+      display: flex;
+      font-size: var(--unnamed-font-size-10);
+      height: var(--unnamed-pixel-20);
+      justify-content: center;
+      position: absolute !important;
+      right: 2.5%;
+      top: 8px;
+      width: var(--unnamed-pixel-16);
+    }
+  }
+  
+}
+
 @include desktop {
   .header-wrapper {
     background: var(--primary-brand) 0% 0% no-repeat padding-box;
@@ -149,3 +168,4 @@ header {
     }
   }
 }
+
