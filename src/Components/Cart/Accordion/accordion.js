@@ -12,7 +12,7 @@ const Accordion = ({ title, content, subcontent }) => {
             <div className='cart-accordian-title'>{title}<br /><span className='regular-heading-s-14s'>{subcontent}</span></div>
 
 
-            <div className='text-right'>{isActive ? '-' : '+'}</div>
+            <div className='text-right'>{isActive ? '▲' : '▼'}</div>
           </div>
           {isActive && <div className="accordion-content cart-left-section">{content}</div>}
         </div>

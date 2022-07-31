@@ -12,15 +12,26 @@
 
             }
 
+            h5 {
+                font-size: 18px;
+                width: 90%;
+                margin-bottom: 8px;
+            }
+
+            p {
+                margin-bottom: 8px;
+                font-size: 16px;
+            }
+
+            .quantity-cart {
+                margin-top: 16px;
+            }
+
             .cart-section-details {
                 display: flex;
 
-
-
-
                 h5 {
                     color: var(--unnamed-color-172026);
-
                     font-size: 20px;
                     letter-spacing: var(--unnamed-character-spacing-0);
                     text-align: left;
@@ -41,26 +52,29 @@
             }
         }
 
+        .input-grp-txt{
+            margin-top:8px;
+        }
+
+
         .cart-quantity-details {
             display: flex;
 
-            .quantity-cart {
-                display: none;
-
-                .quantity-btn {
-                    background: var(--white) 0 0 no-repeat padding-box;
-                    border: 2px solid var(--gray-m1);
-                    border-radius: 8px;
-                    color: var(--unnamed-color-172026);
-                    font: var(--unnamed-font-style-normal) normal 600 var(--unnamed-font-size-16)/var(--unnamed-line-spacing-20) var(--unnamed-font-family-muli);
-                    height: 40px;
-                    letter-spacing: .32px;
-                    margin: 0 12px;
-                    opacity: 1;
-                    text-align: center;
-                    width: 87px;
-                }
+            
+            .quantity-btn {
+                background: var(--white) 0 0 no-repeat padding-box;
+                border: 2px solid var(--gray-m1);
+                border-radius: 8px;
+                color: var(--unnamed-color-172026);
+                font: var(--unnamed-font-style-normal) normal 600 var(--unnamed-font-size-16)/var(--unnamed-line-spacing-20) var(--unnamed-font-family-muli);
+                height: 40px;
+                letter-spacing: .32px;
+                margin: 0 12px;
+                opacity: 1;
+                text-align: center;
+                width: 87px;
             }
+
 
         }
 
@@ -102,6 +116,7 @@
 
                 .action-section {
                     padding-left: 36px;
+                    margin-top: 30px;
 
                     div {
                         display: flex;
@@ -118,9 +133,10 @@
                             height: 18px;
                         }
                     }
+
                     a {
                         text-decoration: none;
-                        color:var(--unnamed-color-172026);
+                        color: var(--unnamed-color-172026);
                     }
 
                 }
@@ -135,10 +151,10 @@
 
                     h5 {
                         color: var(--unnamed-color-172026);
-
                         font-size: 20px;
                         letter-spacing: var(--unnamed-character-spacing-0);
                         text-align: left;
+                        margin-bottom: 8px;
                     }
 
                     div {
@@ -149,9 +165,10 @@
                     p {
                         color: var(--unnamed-color-172026);
                         font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-25) var(--unnamed-font-family-muli);
-                        font-size: 18px;
+                        font-size: 16px;
                         letter-spacing: var(--unnamed-character-spacing-0);
                         text-align: left;
+                        margin-bottom: 8px;
                     }
 
                 }
@@ -160,6 +177,7 @@
             .cart-quantity-details {
                 .quantity-cart {
                     display: flex;
+                    margin-top: 60px;
                 }
             }
 
@@ -182,6 +200,7 @@
                 height: 8px;
                 background-color: #D4703D;
                 margin: 0 auto;
+                position: initial;
             }
 
             .display-l-36- {
@@ -198,3 +217,4 @@
         }
     }
 }
+

@@ -11,7 +11,7 @@
     margin-bottom: 24px;
     padding: 11px 90px;
     color:white;
-    width:100%;
+    width:auto;
 }
 .flex-display{
     display: flex;
@@ -78,30 +78,7 @@
         border-radius: 10px;
     }
 
-    // .black-color {
-    //     background: $color_black 0% 0% no-repeat padding-box;  }
-
-    // .white-color {
-    //     background: $color_white 0% 0% no-repeat padding-box;
-    //     border: 2px solid #DFE1E2;
-    // }
-
-    // .teal-green {
-    //     background: $color_teal-green ;
-    // }
-
-    // .teal-blue{
-    //     background-color: $color_teal_blue  ;
-    // }
-    // .magento-color{
-    //     background-color: $color-magento  ;
-    // }
-    // .darkblack-color{
-    //     background-color: $color-darkblack  ;
-    // }
-    // .grey-color{
-    //     background-color: $color-grey ;
-    // }
+    
 
 }
 .size-section {
@@ -165,10 +142,8 @@
 
 @include desktop {
 .productdetails-wrapper {
-    padding: 33px 175px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
+     padding: 33px 130px;
+
 }
 
 .product-img {
@@ -188,6 +163,8 @@ width:auto;
 }
 .bar-padding{
     padding: 0 175px;
+    position: relative;
+    margin-bottom: 48px;
 }
 .sidebar-colors-section {
     display: flex;
@@ -302,10 +279,8 @@ width:auto;
     align-items: center;
 }
 .horizontal-bar{
-    width:110px;
-    height: 8px;
-    background-color: #D4703D;
-    margin: 0 0 44px 0;
+    left: 10%;
+    position: absolute;
    
 }
 .pt-16{

@@ -88,7 +88,7 @@ function CartItem() {
                 <div className="aem-Grid aem-Grid--default--12 aem-Grid--phone--1">
                     <div className="cart-section  aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--1 ">
                         <img src={product.image} className="cartimg" alt={product.title} />
-                        <div >
+                        <div className="text-left">
                             <h5>{product.title}</h5>
                             <p> Size: Medium</p>
                             <p> Color: Black</p>
@@ -108,6 +108,7 @@ function CartItem() {
                         </div>
 
                     </div>
+                   
                     <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--1 cart-quantity-details">
                         <div className="quantity-cart visible_lg_block">
                             <span type="button" onClick={handleDecrement} className="input-grp-txt"><img src={minus} className="minuscount-img-cart" alt="decrement" /></span>
@@ -151,7 +152,7 @@ function CartItem() {
                         <div className="cart-section-details aem-Grid aem-Grid--default--12 aem-Grid--phone--1">
 
                             <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--1">
-                                {selectedPro.length != 0 ? selectedPro.map(ProductList) : "No Data Found"}
+                               <div className="text-center display-s-20-">{selectedPro.length != 0 ? selectedPro.map(ProductList) : "No Data Found"}</div> 
 
                                 <div className="aem-Grid aem-Grid--default--12 aem-Grid--phone--1" >
 

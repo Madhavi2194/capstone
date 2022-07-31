@@ -1617,7 +1617,7 @@
       display: none;
     }
   }
-  @media (min-width: 769px) and (max-width: 1200px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     .aem-Grid.aem-Grid--1 > .aem-GridColumn.aem-GridColumn--tablet--1 {
       float: left;
       clear: none;
@@ -3990,7 +3990,7 @@
     }
   }
   /* tablet breakpoint */
-  @media (min-width: 769px) and (max-width: 1200px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     .aem-Grid.aem-Grid--1 > .aem-GridColumn.aem-GridColumn--tablet--1 {
       float: left;
       clear: none;

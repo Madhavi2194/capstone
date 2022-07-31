@@ -1,13 +1,24 @@
 @import '../../style/mixins.scss';
 
 .homeBanner-container {
+    h2 {
+        font: var(--unnamed-font-style-normal) 
+        normal var(--unnamed-font-weight-600) 
+        var(--unnamed-font-size-48)/var(--unnamed-line-spacing-60)
+        var(--unnamed-font-family-source-serif-pro);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-172026);
+        text-align: center;
+        font-size: 36px;
+    }
     .display-xl-24- {
         font-size: 28px;
         line-height: 42px;
         font-weight: bold;
         margin-top: 16px;
     }
-    .regular-heading-20{
+
+    .regular-heading-20 {
         font-family: var(--unnamed-font-family-muli);
         font-style: var(--unnamed-font-style-normal);
         font-weight: var(--unnamed-font-weight-bold);
@@ -17,7 +28,8 @@
         color: var(--unnamed-color-172026);
         text-align: center;
     }
-    .regualr-heading-16{
+
+    .regualr-heading-16 {
         font-family: var(--unnamed-font-family-muli);
         font-style: var(--unnamed-font-style-normal);
         font-weight: var(--unnamed-font-weight-normal);
@@ -30,8 +42,9 @@
 
     .horizontal-bar {
         position: absolute;
-        bottom: -4%;
-        right: 31%;
+        bottom: -20%;
+        right: 37%;
+        width: 25%;
     }
 
     .banner-content-sec {
@@ -41,21 +54,23 @@
 
     .banner-image-sec {
         width: 100%;
-        margin: 0;
+        margin-bottom: 16px;
         height: 350px;
         background-image: url(../../assests/manModel-1.jpg);
         background-position: top;
         background-size: cover;
-        
+
 
     }
 
     .button-wrapper {
+        padding: 0 50px;
+        position: relative;
         .btn {
-            padding: 11px 45px;
+            padding: 10px 10px;
             margin: 8px 0;
             color: #D4703D;
-            width:100%;
+            width: 100%;
         }
 
         .button-shop {
@@ -75,24 +90,67 @@
         }
 
     }
+    .banner-container-lg {
+        padding: 0 16px;
+    }
 
 }
 
+
+@include tablet {
+    .homeBanner-container {
+        
+        .display-xl-24- {
+          text-align: center;
+        }
+        .regualr-heading-16 {
+            text-align: left;
+        }
+        .regular-heading-20 {
+            text-align: left;
+        }
+
+        .image-sec-right {
+            float: right !important;
+        }
+
+        .horizontal-bar {
+            position: absolute;
+            left: -70px;
+            width: 35%;
+            bottom: -50%;
+        }
+
+        .button-wrapper {
+           width:75%;
+           padding: 0;
+          
+        }
+        h2 {
+            text-align: left;
+         }
+        
+
+    }
+}
+
 @include desktop {
+    
     .homeBanner-container {
         margin: 0 107px;
 
-        .display-xl-24- {
-            font-family: var(--unnamed-font-family-muli);
-            font-style: var(--unnamed-font-style-normal);
-            font-weight: var(--unnamed-font-weight-600);
-            font-size: var(--unnamed-font-size-48);
-            line-height: var(--unnamed-line-spacing-60);
+        h2 {
+            font: var(--unnamed-font-style-normal) 
+            normal var(--unnamed-font-weight-600) 
+            var(--unnamed-font-size-48)/var(--unnamed-line-spacing-60)
+            var(--unnamed-font-family-source-serif-pro);
             letter-spacing: var(--unnamed-character-spacing-0);
             color: var(--unnamed-color-172026);
             text-align: left;
+            font-size: 48px;
         }
-        .regular-heading-20{
+
+        .regular-heading-20 {
             font-family: var(--unnamed-font-family-muli);
             font-style: var(--unnamed-font-style-normal);
             font-weight: var(--unnamed-font-weight-600);
@@ -101,25 +159,31 @@
             letter-spacing: var(--unnamed-character-spacing-0);
             color: var(--unnamed-color-172026);
             text-align: left;
-        }  
-        .regualr-heading-16{
-            text-align: left;
-        }     
+        }
 
-        .image-sec-right{
+        .regualr-heading-16 {
+            text-align: left;
+        }
+        .regular-heading-20 {
+            text-align: left;
+        }
+
+        .image-sec-right {
             float: right !important;
         }
 
         .horizontal-bar {
             position: absolute;
-            bottom: -17%;
-            left: 5%;
+            top: 100px;
+            left: -36%;
+            width: 25%;
         }
-        
+
 
         .banner-content-sec {
-            padding: 0 44px;
+            padding: 0 20px;
             text-align: left;
+         
         }
 
         .banner-image-sec {
@@ -133,19 +197,21 @@
         }
 
         .button-wrapper {
-            display:flex;
+            display: flex;
+            padding: 0;
+            width: 100%;
+      
             .btn {
-                padding: 11px 27px;
+                padding: 12px 15px;
                 margin-right: 33px;
                 color: #D4703D;
-                width:auto;
+                width: auto;
             }
 
             .button-shop {
                 background: var(--white) 0% 0% no-repeat padding-box;
                 background: #FFFFFF 0% 0% no-repeat padding-box;
                 border: 2px solid #D4703D;
-                
             }
 
             .button-shopnow {
@@ -160,4 +226,22 @@
         }
 
     }
+}
+
+@include largeDesktop{
+   
+    .homeBanner-container {
+        .horizontal-bar {
+            position: absolute;
+            bottom: -17%;
+            left: 9.8% !important;
+            width:8%
+        }
+        
+    }
+    .banner-container-lg {
+        padding: 0 100px !important;
+    }
+    
+    
 }

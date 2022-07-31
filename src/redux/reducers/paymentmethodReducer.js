@@ -1,7 +1,9 @@
 
 const paymentIntialState = {
     paymentInfo: {
-       
+      nameoncard:"",
+      cardno:"",
+      cvv:"",
      }
   };
   

@@ -56,16 +56,14 @@ const Gallery = (props) => {
                 <div className="column">
                     <img className="demo cursor" src={image} onClick={() => currentSlide(5)}  alt="product-img" />
                 </div>
-                <div className="column">
-                    <img className="demo cursor" src={image} onClick={() => currentSlide(6)}  alt="product-img" />
-                </div>
+                
 
                 <a className="next-slide"  onClick={() => plusSlides(1)}><img src={downArrow} alt="down arrow" /></a>
             </div>
 
             <div className="aem-GridColumn aem-GridColumn--default--10">
                 <div className="mySlides">                    
-                    <img src={image} alt="product-img" />
+                    <img src={image} alt="product-img" style={{display:"block"}}/>
                 </div>
 
                 <div className="mySlides">
@@ -84,9 +82,9 @@ const Gallery = (props) => {
                 <img src={image} alt="product-img" />
                 </div> 
                 
-                <div className="mySlides">
+                {/* <div className="mySlides">
                 <img src={image} alt="product-img" />
-                </div>              
+                </div>               */}
 
             </div>
 

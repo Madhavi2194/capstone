@@ -45,7 +45,7 @@ const ShippingMethod = (props) => {
                     <div className="radio-btn">
                         <form className="shipping-method-form-section" onSubmit={handleSubmit(onSubmit)}>
                             <div className="first-btn">
-                                <input type="radio" id="stdshipping" className="shipping-radio-btn" name="shippingtype" checked={ShippingMethod_state.shippingtype === "Standard Shipping (4-8 business days via USPS) FREE"} value="Standard Shipping (4-8 business days via USPS) FREE" onChange={setFormdata} />
+                                <input type="radio" id="stdshipping" className="shipping-radio-btn" name="shippingtype" defaultChecked={ShippingMethod_state.shippingtype === "Standard Shipping (4-8 business days via USPS) FREE"} value="Standard Shipping (4-8 business days via USPS) FREE" onChange={setFormdata} />
                                 <label htmlFor="html" className="shipping-method-btn-txt">Standard Shipping (4-8 business days via USPS) FREE</label>
                             </div>
                             <div className="first-btn">

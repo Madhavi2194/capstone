@@ -10,7 +10,7 @@ const ShippingInfo = (props) => {
     const [isEditview, toggleEditMode] = useState(true);
     const shippingInfo_Store = useSelector((state) => state.shippingInfo.shippingInfo);
     const [FinalData, Set_FinalData] = useState(shippingInfo_Store);
-    const [ShippingInfo_state, Set_ShippingInfo_state] = useState(FinalData);
+    const [ShippingInfo_state, Set_ShippingInfo_state] = useState(shippingInfo_Store);
 
 
     let dispatch = useDispatch();
@@ -22,22 +22,21 @@ const ShippingInfo = (props) => {
     } = useForm({ mode: "all", defaultValues: ShippingInfo_state });
 
     const onSubmit = (data) => {
-        
+
         toggleEditMode(false);
         props.clickContinue();
-        Set_ShippingInfo_state(
-            (pre) => {
-                return { ...data };
-            }
-        );
-        dispatch(setshippingInfo(ShippingInfo_state))
+
+        Set_ShippingInfo_state((p) => {
+            return { ...data }
+        })
+        dispatch(setshippingInfo(data))
     }
 
     const onEdit = () => {
         toggleEditMode(true);
     }
 
-     return (
+    return (
         <>
 
             <section className=' checkout-wrapper mb-24'>
@@ -95,7 +94,6 @@ const ShippingInfo = (props) => {
                                             },
                                         })} >
                                         <option value="" hidden="" disabled="">Select Country</option>
-                                        <option value="Select">Select</option>
                                         <option value="India">India</option>
                                         <option value="United States">United States</option>
                                         <option value="United Kingdom">United Kingdom</option>
@@ -164,13 +162,13 @@ const ShippingInfo = (props) => {
                                     Street Address 2
                                 </label>
                                 <input className="checkout-input-box" type="text" id="streetadr2" placeholder="Enter Your Stret Address2" name="streetadr2"
-                                   {...register('streetadr2', {
-                                    required: 'Street Address is Required',
-                                    pattern: {
-                                        value: /^[A-Za-z ]+$/,
-                                        message: 'Enter Street Address',
-                                    },
-                                })}/>
+                                    {...register('streetadr2', {
+                                        required: 'Street Address is Required',
+                                        pattern: {
+                                            value: /^[A-Za-z ]+$/,
+                                            message: 'Enter Street Address',
+                                        },
+                                    })} />
                                 <p className='error-msg'>{errors?.streetadr2?.message}</p>
                             </div>
                         </div>
@@ -264,7 +262,7 @@ const ShippingInfo = (props) => {
                     <div className='text-btn-center'>
                         <button className="btn shopping-btn-mb display-block-sm">Continue</button>
                         <button className="btn shopping-btn display-block-lg" >Continue To shipping Method</button>
-                </div>
+                    </div>
 
 
                 </form> :

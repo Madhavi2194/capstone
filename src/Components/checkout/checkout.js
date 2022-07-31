@@ -44,7 +44,7 @@ const Checkout = () => {
                 <div className='mb-32'><HorizontalBar></HorizontalBar></div>
             </div>
             <div className="aem-Grid aem-Grid--12">
-                <div className='aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--8 aem-GridColumn--phone--12 padding-checkout'>
+                <div className='aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 padding-checkout'>
                     <ShippingInfo clickContinue={() => handleView(SHIPPING_METHOD)} ></ShippingInfo>
 
                     {activeMode[SHIPPING_METHOD] ? (
@@ -65,7 +65,7 @@ const Checkout = () => {
 
                 </div>
 
-                <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--8 aem-GridColumn--phone--12'>
+                <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--12 aem-GridColumn--phone--12'>
                     {!activeMode[SHIPPING_METHOD] && !activeMode[PAYMENT_INFO] && <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--5 aem-GridColumn--phone--hide ">
                         <section className='sign-in-section'>
                             <div className='aem-Grid aem-Grid--12'>

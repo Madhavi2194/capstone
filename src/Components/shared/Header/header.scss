@@ -39,7 +39,7 @@ header {
     height: var(--unnamed-pixel-20);
     justify-content: center;
     position: absolute !important;
-    right: 6.5%;
+    right: 5.5%;
     top: 8px;
     width: var(--unnamed-pixel-16);
   }
@@ -119,6 +119,7 @@ header {
   
 }
 
+
 @include desktop {
   .header-wrapper {
     background: var(--primary-brand) 0% 0% no-repeat padding-box;
@@ -132,7 +133,7 @@ header {
       height: var(--unnamed-pixel-20);
       justify-content: center;
       position: absolute !important;
-      right: 22%;
+      right: -18px;
       top: 8px;
       width: var(--unnamed-pixel-16);
     }
@@ -162,10 +163,13 @@ header {
     display: var(--unnamed-display-flex);
     justify-content: space-evenly;
     width: 20%;
+    position: relative;
+    
 
     .text_top {
       vertical-align: top;
     }
   }
 }
+
 

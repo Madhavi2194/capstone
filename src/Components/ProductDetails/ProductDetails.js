@@ -56,32 +56,25 @@ function ProductDetails() {
         setNum(e.target.value);
     }
 
-
-
     return (
         <>
             {image ?
-                <div >
+                <div>
                     <div className='productdetails-wrapper'>
-
-
-                        <div className='product-wrapper'>
-                            <Gallery image={image}></Gallery>
+                    <div className="aem-Grid aem-Grid--12 ">
+                        <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--tablet--5 aem-GridColumn--phone--12">
+                            <div className='product-wrapper'>
+                                <Gallery image={image}></Gallery>
+                            </div>
                         </div>
-
-
+                        <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--tablet--7 aem-GridColumn--phone--12">
                         <div className='product-description'>
-
                             <div className="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 px-20">
                                 clothing / Women's / Outwear
                             </div>
                             <div className='regular-heading-l-20- pt-16'><b>{title}</b></div>
                             <p className='display-s-20- mb-16'>$ {price}</p>
-
-                            
                             <p className='regular-heading-m-16- mb-16 border-line pt-18 '>{product.description}</p>
-                            
-                           
 
                             <section>
                                 <p className='product-title-detail mb-20'>Quantity</p>
@@ -91,6 +84,7 @@ function ProductDetails() {
                                     <button className="plus" onClick={incNum}></button>
                                 </div>
                             </section>
+
                             <section className='block-header'>
                                 <div>
                                     <button onClick={navigateCart} className='addcart_buttom'> ADD TO CART</button>
@@ -101,7 +95,12 @@ function ProductDetails() {
                                 </div>
                             </section>
 
+                            </div>
                         </div>
+                    </div>
+                       
+
+                        
                     </div>
 
                     <div className=''>
@@ -111,6 +110,7 @@ function ProductDetails() {
                                     <h2><b>{title}</b></h2>
                                 </div>
                             </div>
+                            
                             <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--12 aem-GridColumn--phone--12  product-info-description regular-body-s-14- mb-32 mr-32">
                                 <div className="block-header mb-16">
                                     <div>

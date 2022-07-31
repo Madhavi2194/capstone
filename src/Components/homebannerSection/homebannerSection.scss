@@ -1,6 +1,7 @@
 @import '../../style/mixins.scss';
 
 .product-banner-wrapper {
+    margin-top:48px;
     display: grid;
     grid-template-rows: 3fr 1fr 5fr;
     grid-template-columns: 1fr 2fr 4fr;
@@ -62,6 +63,7 @@
 
 
 @include desktop {
+    
    
     .product-banner-wrapper {
         display: grid;

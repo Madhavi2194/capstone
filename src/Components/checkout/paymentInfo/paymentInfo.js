@@ -73,7 +73,7 @@ const PaymentInfo = (props) => {
                                     <label className="checkout-lable">
                                         Credit Card Number
                                     </label>
-                                    <input className="checkout-input-box" type="text" id="cardno" name="cardno" placeholder="XXXX XXXX XXXX 1234"
+                                    <input className="checkout-input-box" type="number" id="cardno" name="cardno" placeholder="XXXX XXXX XXXX 1234"
                                       {...register('cardno', {
                                         required: 'Credit Card No is Required',
                                         pattern: {
@@ -95,7 +95,7 @@ const PaymentInfo = (props) => {
                             <div className='aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--tablet--2 aem-GridColumn--phone--12'>
                                 <div className="form-group">
                                     <label className="checkout-lable" htmlFor=""> CVV</label>
-                                    <input className="checkout-input-box" type="text" id="lname" placeholder="Enter CVV" name="cvv"
+                                    <input className="checkout-input-box" type="number" id="lname" placeholder="Enter CVV" name="cvv"
                                      {...register('cvv', {
                                         required: 'CVV No Required',
                                         pattern: {

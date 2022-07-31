@@ -11,13 +11,14 @@ const Ordersummary = () => {
     const ProductshipData = useSelector((state) => state.shippingInfo.shippingInfo);
     const ProductshipMethoddata = useSelector((state) => state.shippingMethod.shippingMethod);
     const productpaymentData = useSelector((state) => state.paymentInfo.paymentInfo);
-
+    console.log("ProductshipData",ProductshipData); 
+    
 
     return (
         <div className="container order">
             <div className='text-center'>
-                <h1> Order Successful! </h1>
-                <HorizontalBar />
+                <h1 className="margin-heading-checkout"> Order Successful! </h1>
+                <div className='mb-32'><HorizontalBar /></div>
             </div>
 
             <div className="aem-Grid aem-Grid--default--12 aem-Grid--phone--1">
@@ -62,7 +63,7 @@ const Ordersummary = () => {
                 <div className="adds__section aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--1">
                     <section className="aem-Grid aem-Grid--default--12 aem-Grid--phone--1">
                         <div className="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--1">
-                            <div class="ad-heading">Give us a follow to SAVE 20% on your next order.</div>
+                            <div className="ad-heading">Give us a follow to SAVE 20% on your next order.</div>
                             <div className='social__links'>
 
                                 <img src={Instagram} />

@@ -57,6 +57,12 @@ h4 {
     }
 }
 
+@include tablet {
+    h4{
+        width:300px;
+    }
+}
+
 @include desktop {
     .product-list-wrapper{
         padding: 0 32px;

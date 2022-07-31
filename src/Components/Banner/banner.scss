@@ -34,6 +34,15 @@
 }
 
 
+@include tablet {
+    .banner-wrapper {
+
+        .banner-sider-content {
+            margin: -60px auto 50px;
+        }
+    } 
+}
+
 @include desktop {
 
     .banner-wrapper {
